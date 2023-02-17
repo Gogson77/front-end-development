@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+
+<body>
+    <form action="script.php" method="POST" enctype="multipart/form-data" name="demo_form" id="demo-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <hr>
+        <input type="radio" name="country" value="Serbia" id="Serbia" checked="checked">
+        <label for="Serbia">Serbia</label>
+        <br>
+        <input type="radio" name="country" value="Bosnia" id="Bosnia">
+        <label for="Bosnia">Bosnia</label>
+        <br>
+        <input type="radio" name="country" value="Croatia" id="Croatia">
+        <label for="Croatia">Croatia</label>
+        <hr>
+        <input type="checkbox" name="question" value="like" id="question">
+        <label for="question">I like HTML</label>
+        <hr>
+        <input type="number" name="quantity" min="1" max="5">
+        <hr>
+        <input type="color" name="favcolor">
+        <hr>
+        <input type="range" name="points" min="0" max="10">
+        <hr>
+        <textarea name="" id="" cols="30" rows="10">Lorem ipsum dolor sit amet.</textarea>
+        <hr>
+        <select name="country" id="country">
+            <option value="Serbia">Serbia</option>
+            <option value="Bosnia" selected="selected">Bosnia</option>
+            <option value="Croatia">Croatia</option>
+        </select>
+        <hr>
+        <fieldset>
+            <legend>Personal info</legend>
+            <label for="name">First name:</label><br>
+            <input type="text" name="name" id="name"><br>
+
+            <label for="surname">Last name:</label><br>
+            <input type="text" name="surname" id="surname">
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact</legend>
+            <label for="email">Email:</label><br>
+            <input type="text" name="email" id="email"><br>
+
+            <label for="phone">Phone:</label><br>
+            <input type="text" name="phone" id="phone">
+        </fieldset>
+        <hr>
+        <button>Button</button>
+        <hr>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
