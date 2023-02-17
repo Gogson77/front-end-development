@@ -37,6 +37,24 @@
             <option value="Croatia">Croatia</option>
         </select>
         <hr>
+        <select name="country" id="country" multiple="multiple">
+            <option value="Serbia">Serbia</option>
+            <option value="Romania" selected="selected">Romania</option>
+            <option value="Ukraine">Ukraine</option>
+        </select>
+        <hr>
+        <select>
+            <optgroup label="Europe">
+                <option value="romania">Romania</option>
+                <option value="serbia">Serbia</option>
+                <option value="ukraine">Ukraine</option>
+            </optgroup>
+            <optgroup label="Asia">
+                <option value="chine">China</option>
+                <option value="india">India</option>
+            </optgroup>
+        </select>
+        <hr>
         <fieldset>
             <legend>Personal info</legend>
             <label for="name">First name:</label><br>
@@ -54,6 +72,11 @@
             <label for="phone">Phone:</label><br>
             <input type="text" name="phone" id="phone">
         </fieldset>
+        <hr>
+        <button type="button">
+            <img src="images/button.gif" alt="button" width="10" height="10">
+            Finish
+        </button>
         <hr>
         <button>Button</button>
         <hr>
