@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forms exercise</title>
+</head>
+
+<body>
+    <form action="#" method="POST" name="form1" id="form1" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Personal information:</legend>
+            <label for="fullname">Your full name:</label>
+            <input type="text" name="fullname" id="fullname"><br>
+            <br>
+            <label for="email">E-mail Address:</label>
+            <input type="text" name="email" id="email"><br>
+            <br>
+            <label for="country">You are:</label>
+            <select name="country" id="country">
+                <option value="Serbia">Serbia</option>
+                <option value="Bosnia" selected="selected">Bosnia</option>
+                <option value="Romania">Romania</option>
+            </select>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Reason you are contacting us:</legend>
+            <input type="checkbox" name="information" id="information">
+            <label for="information">I would like detailed information</label><br>
+            <input type="checkbox" name="employment" id="employment">
+            <label for="employment">I am interested in employment</label><br>
+            <input type="checkbox" name="feedback" id="feedback">
+            <label for="feedback">I would like to give you my feedback</label><br>
+            <input type="checkbox" name="other" id="other">
+            <label for="other">Other (see below)</label>
+        </fieldset>
+        <br>
+        <label for="comment">Comments</label><br>
+        <textarea name="comment" id="comment"></textarea><br>
+        <br>
+        <input type="submit" name="submit_button" id="submit_button" value="Send">
+    </form>
+</body>
+
+</html>
