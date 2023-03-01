@@ -1,0 +1,9 @@
+/* auto margine lijevo i desno za centriranje
+    gore i dole desilo se stapanje margina
+*/
+
+p {
+    width: 50%;
+    margin: 50px auto;
+    border: 1px solid red;
+}
