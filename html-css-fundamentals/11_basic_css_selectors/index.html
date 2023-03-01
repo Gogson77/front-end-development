@@ -4,11 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Basic CSS Selectors</title>
-    
+
     <style type="text/css">
+        /* "div *" - univerzalni primjer slozenog selektora */
+        /* tipski selektori na osnovu naziva elemenata */
+        /* class selektor za vrijednoscu class atributa moze se definisati na bilo kom elementu */
+        .content {
+            border: 1px solid aqua;
+        }
 
-        
+        /* id selektor */
+        #first-div {
+            color: blue;
+        }
 
+        #second-div {
+            color: red;
+        }
+
+        /* selektor na osnovu relacija elemenata; zovu se kombinatori; ima ih 4; 
+        1. descendant - selektovanje svih potomaka */
+
+        #first-div p {
+            color: brown;
+        }
+
+        /* 2. child selektor - direktni potomci */
+        #first-div>p {
+            color: antiquewhite;
+        }
+
+        /* 3. prvi naredni srodni element tipa paragraph*/
+        #first-div+p {
+            color: blueviolet;
+        }
+
+        /* 4. general sibling selektor */
+        #first-div~p {
+            color:blue; 
+        }
     </style>
 
 </head>
@@ -23,7 +57,7 @@
             <p>Paragraph 3 is in second div</p>
         </div>
     </div>
-    <p>Paragraph 4. is Not in a div</p>
+    <p class="content">Paragraph 4. is Not in a div</p>
     <p>Paragraph 5. is Not in a div</p>
 </body>
 
