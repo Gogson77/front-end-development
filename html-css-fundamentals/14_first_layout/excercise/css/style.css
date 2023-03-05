@@ -1,0 +1,37 @@
+body {
+    background: #89D6D9;
+    padding: 0px;
+    margin: 0px;
+}
+
+#wrapper {
+    background: #FFFFFF;
+    width: 920px;
+    padding: 20px;
+    margin: 0px auto;
+}
+
+.footer {
+    background: #DDDDDD;
+    width: 900px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+
+
+.tbl, .tbl th, .tbl td {
+    background: #F5F4F2;
+    border: 1px solid #CCCCCC;
+    border-collapse: collapse;
+    padding: 4px;
+}
+
+.tbl th {
+    background: #ECE7D7;
+}
+
+.bi {
+    font-weight: bold;
+    font-style: italic;
+}
