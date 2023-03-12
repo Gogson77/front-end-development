@@ -24,8 +24,17 @@ table {
 }
 
 thead {
-    background-color: #02AD8B;
+    background-color: gray;
     color: white;
+    font-size: larger;
+}
+
+#heading {
+    font-size: larger;
+}
+
+#heading2 {
+    text-align: left;
 }
 
 th {
