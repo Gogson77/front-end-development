@@ -1,0 +1,50 @@
+body {
+    width: 960px;
+    font-family: 'Oswald', sans-serif;
+}
+
+nav {
+    box-sizing: border-box;
+    width: 160px;
+    float: left;
+}
+
+aside {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 800px;
+    border-left: 1px solid black;
+    padding: 8px;
+}
+
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #02AD8B;
+    color: white;
+}
+
+th {
+    padding: 18px;
+}
+
+td.title {
+    font-style: italic;
+}
+
+td {
+    padding: 12px;
+}
+
+th,
+td {
+    border: solid 1px #e6e6e6;
+}
+
+tr.even {
+    background-color: #F7F7F7;
+} 
