@@ -8,7 +8,7 @@
 <body>
     <script>
 
-        var a = 5;
+/*         var a = 5;
         var b = 10;
 
         function calculateRectArea(a, b){
@@ -20,7 +20,20 @@
         var result = calculateRectArea(a, b);
 
         console.log("Result is: " + result);
-        console.log("a = " + a);
+        console.log("a = " + a); */
+
+        function calculateRectArea(theObject) {
+            var result = theObject.numberA * theObject.numberB;
+            theObject.numberA = 30;
+            return result;
+        }
+
+        var rectangle = { numberA: 5, numberB: 10 };
+
+        var result = calculateRectArea(rectangle);
+
+        console.log("Result is: " + result);
+        console.log("a = " + rectangle.numberA);
 
     </script>
 </body>
