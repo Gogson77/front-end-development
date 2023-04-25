@@ -6,6 +6,48 @@
     <title>JavaScript Objects</title>
 </head>
 <body>
-    
+    <script>
+
+/*         let make = "Subaru";
+        let model = "Legacy";
+        let weight = 1560;
+        let color = "black";
+
+        let subaryLegacy = {make: "Subary", model: "Legacy", weight: 1560, color: "black"};
+
+        console.log(subaryLegacy.make); */
+
+/*         let subaryLegacy = new Object();
+        subaryLegacy.make = "Subary";
+        subaryLegacy.model = "Legacy";
+        subaryLegacy.weight = 1560;
+        subaryLegacy.color = "black";
+
+        console.log(subaryLegacy.make); */
+
+        function Car(make, model, weight, color) {
+            this.make = make;
+            this.model = model;
+            this.weight = weight;
+            this.color = color;      
+            
+            this.statEngine = function(){
+                return "Engine of " + this.make + " " + this.model + " is started.";
+            }
+        }
+
+        let subaryLegacy = new Car("Subary", "Legacy", 1563, "black");
+        let fordTaurus = new Car("Ford", "Taurus", 1876, "blue");
+        let porschePanamera = new Car("Porsche", "Panamera", 1963, "grey");
+/*         console.log(subaryLegacy);
+        console.log(fordTaurus);
+        console.log(porschePanamera); */
+
+        console.log(subaryLegacy.statEngine());
+        console.log(fordTaurus.statEngine());
+        console.log(porschePanamera.statEngine());
+
+
+    </script>
 </body>
 </html>
