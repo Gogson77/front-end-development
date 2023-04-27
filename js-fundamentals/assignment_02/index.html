@@ -10,6 +10,44 @@
 <body>
     <script>
 
+        var a = prompt("Unesite prvi broj: ");
+        var operacija = prompt("Unesite računsku operaciju (+, -, *, /): ");
+        var b = prompt("Unesite drugi broj: ");
+        a = parseInt(a);
+        b = parseInt(b);
+        var operacijaString;
+        var rezultat;
+
+        switch (operacija) {
+            case "+":
+                rezultat = a + b;
+                operacijaString = "sabiranja";
+                break;
+            case "-":
+                rezultat = a - b;
+                operacijaString = "oduzimanja";
+                break;
+            case "*":
+                rezultat = a * b;
+                operacijaString = "množenja";
+                break;
+            case "/":
+                if (b != 0) {
+                    rezultat = a / b;
+                    operacijaString = "dijeljenja";
+                } else {
+                    alert("Dijeljenje sa nulom nije moguće!");
+                }
+                break;
+            default:
+                break;
+        }
+
+        if (rezultat != undefined) {
+            alert("Rezultat operacije " + operacijaString + " je: " + rezultat);
+        } else {
+            alert("Podaci nisu pravilno unijeti. Pokušajte ponovo!")
+        }
 
     </script>
 </body>
