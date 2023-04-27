@@ -2,11 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Exceptions</title>
 </head>
 <body>
-    
+    <script>
+
+        /* try {
+            console.log("Value of variable b is: " + b);
+        } catch (err) {
+            console.log("Error name: " + err.name);
+            console.log("Error message: " + err.message);
+        } finally {
+            console.log("Hello from finally block.");
+        }
+        
+        console.log("Hello World!"); */
+
+        /* throw "This is Error 333";
+        console.log("Hello World!"); */
+
+        function divide(a, b) {
+
+            if(b == 0){
+
+                var e = new Error("Division by zero is not allowed!");
+                e.name = "Invalid division"; 
+
+                throw e;
+            } else if (b > 1000) {
+                throw {
+                    name: "Out of range",
+                    message: "Divider can't be greater than 1000"
+                }
+                //throw RangeError("Divider can't be greater than 1000");
+        }
+
+            return a / b;
+        } 
+
+        try {
+            divide(5, 2000);
+        } catch (err){
+            console.log("Error name: " + err.name);
+            console.log("Error message: " + err.message);
+        }
+
+    </script>
 </body>
 </html>
