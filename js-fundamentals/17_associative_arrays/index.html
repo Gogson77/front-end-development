@@ -6,6 +6,54 @@
     <title>Associative Arrays in JavaScript</title>
 </head>
 <body>
-    
+    <script>
+
+        /* var user = { "id": 1, "username": 'john', "password": '987sjkhj7', "email": 'john@gmail.com'};
+        
+        for(let property in user){
+            //console.log(property);
+            console.log(user[property]);
+        } */
+        
+        //console.log(user["username"]);
+
+        let map = new Map([
+            ['id', 1],
+            ['username', 'john'],
+            ['password', 'du787kjahd'],
+            ['email', 'john@gmail.com']
+        ]);
+
+        let map1 = new Map();
+        map1.set("id", 1);
+        map1.set('username', 'john');
+        map1.set('password', 'du787kjahd');
+        map1.set('email', 'john@gmail.com');
+
+        //console.log(map.get('username'));
+        //console.log(map.get('id'));
+        //console.log(map.get('email')); 
+
+        //console.log(map.size);    
+        //map.delete('username');
+        //console.log(map.has('username'));,
+        
+        /* for(let [key, value] of map){
+            console.log(key + ": " + value)
+        } */
+
+        /* for(let [key, value] of map.entries()){
+            console.log(key + ": " + value)
+        } */
+
+        /* for(let key of map.keys()){
+            console.log(key)
+        } */
+
+        for(let value of map.values()){
+            console.log(value)
+        }
+
+    </script>
 </body>
 </html>
