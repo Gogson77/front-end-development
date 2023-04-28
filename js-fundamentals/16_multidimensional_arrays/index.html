@@ -6,6 +6,45 @@
     <title>2D JavaScript Arrays</title>
 </head>
 <body>
-    
+    <script>
+
+        let users = [];
+
+        users[0] = [1, "john", "04as89v4v", "john@gmail.com"]; 
+        users[1] = [2, "emma", "7dh9hht4", "emma@gmail.com"];
+        users[2] = [3, "ben", "9fh8df8ds", "ben@gmail.com"];
+        users[3] = [4, "ava", "8dsf89klk", "ava@gmail.com"];
+
+        for(let i = 0; i < users.length; i++){
+            
+            for(let j = 0; j < users[i].length; j++){
+                console.log(users[i][j]);
+            }
+
+        }
+
+        /* let arr = [];
+
+        arr[0] = [1, 2, 3];
+        arr[1] = [4, 5, 6];
+        arr[2] = [7, 8, 9];
+        arr[3] = [10, 11, 12]; 
+        arr[4] = [13, 14, 15];
+
+        console.log(arr[3][2]); */
+
+        /* let arr = [
+            [1, 2, 3], 
+            [4, 5, 6], 
+            [7, 8, 9], 
+            [10, 11, 12], 
+            [13, 14, 15]
+        ];
+
+        console.log(arr[3][2]);
+        console.log(arr[0][0]);
+        console.log(arr[0].toString()); */
+
+    </script>
 </body>
 </html>
