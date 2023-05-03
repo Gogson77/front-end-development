@@ -8,12 +8,26 @@
 </head>
 
 <body>
-
     <script>
 
+        var number_a = prompt("Please enter first number:");
+        var number_b = prompt("Please enter second number:");
+
+        number_a = parseInt(number_a);
+        number_b = parseInt(number_b);
+
+        console.log("Number A value: " + number_a + ". Number A type: " + typeof(number_a));
+        console.log("Number B value: " + number_b + ". Number B type: " + typeof(number_b));
+
+        if (number_a > number_b) {
+            alert("Number " + number_a + " is greater then " + number_b);
+        } else if(number_b > number_a) {
+            alert("Number " + number_b + " is greater then " + number_a);
+        } else {
+            alert ("Numbers are equal.");
+        }
 
     </script>
-    
 </body>
 
 </html>
