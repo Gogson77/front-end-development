@@ -26,10 +26,8 @@ describe("compare() function", function () {
     });
 
     //Spec for should announce that one of the parameters can not be converted to number 
-    it("should announce that one of the parameters can not be converted to number", function () {
-        expect(function(){
-            compare("uztuztuzt", 5)
-        }).toThrowError(TypeError);
+    it("should be able to throw error when one of both values can't be converted to number", function () {
+        expect(function () { compare("uztuztuzt", 5) }).toThrowError(TypeError);
     });
 
 });
