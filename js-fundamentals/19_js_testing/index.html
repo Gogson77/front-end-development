@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Testing</title>
 </head>
+
 <body>
-    
+    <script>
+
+        var number_a = prompt("Please enter first number:");
+        var number_b = prompt("Please enter second number:");
+
+        let result = compare(number_a, number_b)
+
+        switch (result) {
+            case 1:
+                alert("Number " + number_a + " is greater then " + number_b);
+                break;
+            case -1:
+                alert("Number " + number_b + " is greater then " + number_a);
+                break;
+            case 0:
+                alert("Numbers are equal.");
+                break;
+        }
+
+        
+        function compare(a, b) {
+            number_a = parseInt(a);
+            number_b = parseInt(b);
+
+            if (number_a > number_b) {
+                return 1;
+            } else if (number_b > number_a) {
+                return -1;
+            } else {
+                return 0;
+            }
+        }
+
+
+        function testCompare(){
+
+            let fail = false;
+
+            if(compare(22, 11) !== 1){ fail = true; }
+            if(compare(11, 22) !== -1){ fail = true; }
+            if(compare(5, 5) !== 0){ fail = true; }
+            if(compare(-1, 45) !== -1){ fail = true; }
+            
+            if(fail){
+                console.log("Tests failed!")
+            } else { 
+                console.log("Everything is OK.")
+            }
+        }
+
+    </script>
 </body>
+
 </html>
