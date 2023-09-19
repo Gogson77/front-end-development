@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>3D CSS Transformations</title>
+        <style>
+            body {
+                font-family: sans-serif;
+            }
+
+            .box {
+                width: 180px;
+                height: 140px;
+                background-color: #33B6E2;
+                margin: 100px auto;
+                padding: 16px;
+            }
+
+            #main-container {
+                perspective: 300px;
+            }
+
+            #boxes-container {
+                transform: translate3d(100px, 0, 0px);
+            }
+
+            #div-1 {
+                transform: rotate3d(0, 1, 0, 45deg);
+            }
+
+            #div-2 {
+                transform: translate3d(0, 0, 100px);
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="main-container">
+            <div id="boxes-container">
+                <div id="div-1" class="box">transform: rotate3d(0, 1, 0, 45deg);</div>
+                <div id="div-2" class="box">transform: translate3d(0, 0, 100px);</div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
