@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Pseudo-classes for links and custom pointers</title>
+        <style>
+            /* unvisited link */
+            a:link {
+                color: red;
+                text-decoration: none;
+            }
+
+            /* visited link */
+            a:visited {
+                color: green;
+            }
+
+            /* mouse over link */
+            a:hover {
+                color: blue;
+            }
+
+            /* selected link */
+            a:active {
+                color: yellow;
+            }
+
+            #some-div {
+                width: 400px;
+                height: 300px;
+                background-color: blueviolet;
+            }
+
+            #some-div:hover {
+                background-color: blue;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <a href="https://www.google.com">Go to Google</a>
+        <div id="some-div"></div>
+    </body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Pseudo-classes for HTML Forms</title>
+        <style>
+            #contact-wrapper {
+                width: 480px;
+                margin: 0 auto;
+            }
+
+
+            /*STYLES FOR INPUT TEXT FIELDS*/
+            input[type="text"] {
+                width: 100%;
+                padding: 10px;
+                border: solid 2px #c9c9c9;
+                margin: 10px 0px 10px 0px;
+            }
+
+            input[type="text"]:hover {
+                border: solid 2px #969696;
+            }
+
+            input[type="text"]:focus {
+                border: solid 2px #262626;
+            }
+
+            input[type="text"]:disabled {
+                background-color: rgba(201, 201, 201, 0.75);
+            }
+
+
+            /*STYLES FOR INPUT SUBMIT ELEMENT*/
+            input[type="submit"] {
+                padding: 10px;
+                border: solid 2px #c9c9c9;
+                background-color: rgba(201, 201, 201, 0);
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            input[type="submit"]:hover {
+                border: solid 2px #969696;
+            }
+
+            input[type="submit"]:focus {
+                border: solid 2px #262626;
+            }
+
+            input[type="submit"]:active {
+                border: solid 2px #41B9E1;
+            }
+
+
+            /*STYLES FOR INPUT CHECKBOX ELEMENT*/
+            input[type="checkbox"]:checked+label {
+                color: #41B9E1;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="contact-wrapper">
+            <form>
+                <input type="text" name="name" id="name" placeholder="NAME" autocomplete="off">
+                <input type="text" name="email" id="email" placeholder="E-MAIL" autocomplete="off">
+                <input disabled type="text" name="subject" id="subject" placeholder="SUBJECT (disabled)"
+                    autocomplete="off">
+                <input type="submit" name="submit" id="submit" value="SEND">
+                <input type="checkbox" name="subscribe" id="subscribe">
+                <label for="subscribe">YES, I WANT TO RECEIVE INFORMATION ABOUT NEW PROJECTS</label>
+            </form>
+        </div>
+
+    </body>
+
+</html>
