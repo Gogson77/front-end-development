@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Pseudo-elements</title>
+        <style>
+            p {
+                font-family: sans-serif;
+            }
+
+            p::after {
+                content: " - Remember this";
+                color: red;
+            }
+
+            /*p::before {
+                content: "Remember this - ";
+                color: red;
+            }*/
+
+            /*p::first-letter {
+                color: red;
+                font-size: 130%;
+            }*/
+
+            /*p::first-line {
+                text-transform: uppercase;
+                font-weight: bold;
+            }*/
+
+            /*::selection {
+                color: white;
+                background: coral;
+            }*/
+        </style>
+    </head>
+
+    <body>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis. In rhoncus
+            neque odio, non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis. In rhoncus
+            neque odio,
+            non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis. In rhoncus
+            neque odio,
+            non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis. In rhoncus
+            neque odio,
+            non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.</p>
+
+    </body>
+
+</html>

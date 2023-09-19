@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Structural pseudo-classes</title>
+        <style>
+            /****************first-child****************/
+            /*p:first-child {
+                color: blue;
+            }*/
+
+
+            /****************last-child****************/
+            /*p:last-child {
+                color: blue;
+            }*/
+
+
+            /****************first-of-type****************/
+            /*p:first-of-type {
+                color: blue;
+            }*/
+
+
+            /****************last-of-type****************/
+            /*p:last-of-type {
+                color: blue;
+            }*/
+
+
+            /****************only-child****************/
+            /*p:only-child {
+                color: blue;
+            }*/
+
+
+            /****************only-of-type****************/
+            /*p:only-of-type {
+                color: blue;
+            }*/
+
+
+            /****************nth-child(n)****************/
+            /*p:nth-child(2) {
+                color: blue;
+            }*/
+
+            /*p:nth-child(3) {
+                color: blue;
+            }*/
+
+
+            /*p:nth-child(odd) {
+                color: blue;
+            }*/
+
+            /*p:nth-child(even) {
+                color: blue;
+            }*/
+
+            /*p:nth-child(2n+1) {
+                color: blue;
+            }*/
+
+            /*p:nth-child(2n+2) {
+                color: blue;
+            }*/
+
+
+            /****************nth-last-child(n)****************/
+
+            /*p:nth-last-child(2) {
+                color: blue;
+            }*/
+
+            /*p:nth-last-child(3) {
+                color: blue;
+            }*/
+
+
+
+            /****************nth-of-type(n)****************/
+
+            /*p:nth-of-type(2) {
+                color: blue;
+            }*/
+
+            /*p:nth-of-type(3) {
+                color: blue;
+            }*/
+
+
+            /****************nth-last-of-type(n)****************/
+
+            /*p:nth-last-of-type(2) {
+                color: blue;
+            }*/
+
+            /*p:nth-last-of-type(3) {
+                color: blue;
+            }*/
+        </style>
+    </head>
+
+    <body>
+        <h1>Main Heading</h1>
+        <p>Paragraph 0. Not in a div.</p>
+        <div id="first-div" class="content">
+            <h2>Subheading</h2>
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+            <div id="second-div">
+                <h3>Sub subheading</h3>
+                <p>Paragraph 3 in the 2nd div.</p>
+            </div>
+        </div>
+        <p>Paragraph 4. Not in the div.</p>
+        <p>Paragraph 5. Not in the div.</p>
+    </body>
+
+</html>
