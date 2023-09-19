@@ -29,6 +29,8 @@
             width: 100%;
             height: 100vh;
             background-color: #5D7586;
+
+            position: relative;
         }
 
         #scroll-down-arrow{
@@ -59,6 +61,34 @@
             transform: rotate(-45deg);
         }
 
+        #scroll-up-arrow{
+            position: absolute;
+            bottom: 24px;
+            width: 46px;
+            height: 46px;
+
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+
+            border: 2px solid #fff;
+            border-radius: 100%;
+        }
+
+        #scroll-up-arrow::before{
+            position: absolute;
+            content: "";
+            width: 16px;
+            height: 16px;
+            left: 0;
+            right: 0;
+            top: 15px;
+            margin: 0 auto;
+            border-right: 2px solid #fff;
+            border-top: 2px solid #fff;
+            transform: rotate(-45deg);
+        }
+
     </style>
 </head>
 <body>
@@ -68,6 +98,7 @@
     </div>
     <div id="next-section">
         <h1>Section 2</h1>
+        <a id="scroll-up-arrow" href="#intro-section"></a>
     </div>
 </body>
 </html>
