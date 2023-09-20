@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Animation</title>
+        <style>
+            /*@keyframes my-animation {
+                from {
+                    width: 250px;
+                }
+
+                to {
+                    width: 350px;
+                }
+            }*/
+
+            /*@keyframes my-animation {
+                0% {
+                    width: 250px;
+                }
+
+                33% {
+                    width: 300px;
+                }
+
+                66% {
+                    width: 325px;
+                }
+
+                100% {
+                    width: 350px;
+                }
+            }*/
+
+            @keyframes my-animation {
+                0% {
+                    transform: translateX(0px) rotate(0deg);
+                    width: 250px;
+                    height: 180px;
+                }
+
+                33% {
+                    transform: translateX(0px) rotate(360deg);
+                    width: 250px;
+                    height: 180px;
+                }
+
+                66% {
+                    transform: translate(300px, 50px) rotate(360deg);
+                    width: 100px;
+                    height: 75px;
+                }
+
+                100% {
+                    transform: translateX(0px) rotate(0deg);
+                    width: 250px;
+                    height: 180px;
+                }
+            }
+
+
+            .box {
+                background-color: #A2687E;
+                background-image: url(star.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 50%;
+                color: white;
+                margin: 64px auto;
+                font-family: sans-serif;
+                font-size: 28px;
+                width: 250px;
+                height: 180px;
+                border-radius: 8px;
+                /*animation-name: my-animation;
+                animation-duration: 3s;
+                animation-delay: 2s;
+                animation-iteration-count: 2;
+                animation-direction: reverse;
+                animation-fill-mode: forwards;*/
+
+                animation: my-animation 3s ease 2s 2 reverse forwards running;
+
+            }
+
+            .box:hover {
+                animation-play-state: paused;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="box">
+        </div>
+    </body>
+
+</html>
