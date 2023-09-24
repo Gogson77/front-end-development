@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+        }
+
+        #box-1 {
+
+            background: radial-gradient(at top, red, blue );
+            border-radius: 50%;
+
+            animation-name: eye-animation;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+        }   
+
+        @keyframes eye-animation {
+            25% {
+                background: radial-gradient(at right, red, blue );
+            }
+
+            50% {
+                background: radial-gradient(at bottom, red, blue );
+            }
+
+            75% {
+                background: radial-gradient(at left, red, blue );
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box-1"></div>
+</body>
+
+</html>
