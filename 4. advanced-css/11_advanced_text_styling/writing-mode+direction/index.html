@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Mode + Direction</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        div {
+            display: inline-block;
+        } 
+
+        #horizontal-tb {
+            writing-mode: horizontal-tb;
+        }
+
+        #vertical-lr {
+            writing-mode: vertical-lr;
+        }
+        
+        #vertical-rl {
+            writing-mode: vertical-rl;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="horizontal-tb">
+        <ol>
+            <li>Google Chrome</li>
+            <li>Mozilla Firefox</li>
+            <li>Safari</li>
+            <li>Opera</li>
+            <li>Internet Explorer</li>
+        </ol>
+    </div>
+
+    <div id="vertical-lr">
+        <ol>
+            <li>Google Chrome</li>
+            <li>Mozilla Firefox</li>
+            <li>Safari</li>
+            <li>Opera</li>
+            <li>Internet Explorer</li>
+        </ol>
+    </div>
+
+    <div id="vertical-rl">
+        <ol>
+            <li>Google Chrome</li>
+            <li>Mozilla Firefox</li>
+            <li>Safari</li>
+            <li>Opera</li>
+            <li>Internet Explorer</li>
+        </ol>
+    </div>
+
+</body>
+
+</html>
