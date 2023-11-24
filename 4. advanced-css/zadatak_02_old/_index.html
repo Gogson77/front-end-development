@@ -12,7 +12,7 @@
             padding: 0px;
             height: 100vh;
             background-color: #050210;
-            /* overflow: hidden; */
+            overflow: hidden;
         }
 
         .container {
@@ -22,24 +22,13 @@
             height: 50vh;
         }
 
-        .circle::before {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: linear-gradient(to right, #fb5dad, #55fb9f, #b97aff);
-            filter: blur(50px);
-            animation: shine-rotation-animation 1s linear infinite;
-        }
-
         .circle {
             position: relative;
             width: 300px;
             height: 300px;
             background-color: white;
             border-radius: 50%;
+            filter: drop-shadow(0 0 10px #fb5dad) drop-shadow(0 0 10px #55fb9f) drop-shadow(0 0 10px #b97aff);
         }
 
         .inner-circle {
@@ -49,30 +38,12 @@
             width: 260px;
             height: 260px;
             border-radius: 50%;
-            background-color: black;
-        }
 
-        .inner-circle::after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
             background: radial-gradient(circle, #1c1632, #0d0723, black);
             animation: eye-animation 1s linear infinite;
-        }
 
-        @keyframes shine-rotation-animation {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
+            /* background: radial-gradient(circle, #001F3F, transparent);
+            animation: shine-animation 1s linear infinite; */
         }
 
         @keyframes eye-animation {
@@ -119,6 +90,23 @@
             }
         }
 
+        @keyframes shine-animation {
+            0% {
+                transform: scale(0.1);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(0.5);
+                opacity: 0.5;
+            }
+
+            99% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
         .example-gif {
             margin: auto;
             width: 600px;
@@ -128,6 +116,8 @@
             background-position: center;
             background-size: cover;
         }
+
+        /* #2b1f57, #0e023a, */
     </style>
 </head>
 

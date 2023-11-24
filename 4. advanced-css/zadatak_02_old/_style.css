@@ -1,0 +1,197 @@
+
+
+/* posljednje iz _index.html */
+.circle::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1;
+    /* Postavljamo bijeli krug iznad crnog */
+}
+
+.circle {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.circle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 240px;
+    height: 240px;
+    background-color: blue;
+    border-radius: 50%;
+    z-index: 2;
+    /* Postavljamo plavi krug iznad bijelog */
+}
+
+
+/* jos novije */
+html {
+    background-color: #050210;
+}
+
+.circle::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.circle {
+    position: relative;
+    margin: 0 auto;
+    width: 260px;
+    height: 260px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.circle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 240px;
+    height: 240px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+
+/* novije */
+body, html { 
+        background-color: #050210;
+    }
+
+.circle {
+        position: relative;
+        margin: 0px auto;
+        width: 300px;
+        height: 300px;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    .circle::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 260px;
+        height:260px;
+        background-color: blueviolet;
+        border-radius: 50%;
+    }   
+
+
+/* starije */
+body,
+html {
+    background-color: #050210;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    filter: drop-shadow(0 0 10px #fb5dad) drop-shadow(0 0 10px #55fb9f) drop-shadow(0 0 10px #b97aff);
+}
+
+.in-circle {
+    width: 260px;
+    height: 260px;
+    background: radial-gradient(circle, #1c1632, #0d0723, black);
+    border-radius: 50%;
+    animation: eye-animation 1s linear infinite;
+}
+
+.in-circle::after {
+    content: "Gordan Kranjčić";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: larger;
+}
+
+@keyframes eye-animation {
+
+    0%,
+    100% {
+        background: radial-gradient(#1c1632, #0d0723, black);
+    }
+
+    10% {
+        background: radial-gradient(#1c1632 10%, #0d0723, black);
+    }
+
+    20% {
+        background: radial-gradient(#1c1632 20%, #0d0723, black);
+    }
+
+    30% {
+        background: radial-gradient(#1c1632 30%, #0d0723, black);
+    }
+
+    40% {
+        background: radial-gradient(#1c1632 40%, #0d0723, black);
+    }
+
+    50% {
+        background: radial-gradient(#1c1632 50%, #0d0723, black);
+    }
+
+    60% {
+        background: radial-gradient(#1c1632 60%, #0d0723, black);
+    }
+
+    70% {
+        background: radial-gradient(#1c1632 70%, #0d0723, black);
+    }
+
+    80% {
+        background: radial-gradient(#1c1632 80%, #0d0723, black);
+    }
+
+    90% {
+        background: radial-gradient(#1c1632 90%, #0d0723, black);
+    }
+}
