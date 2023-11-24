@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexbox Layout Demo</title>
+    <style>
+        body {
+            margin: 0;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        #wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            text-align: center;
+            margin: 0;
+        }
+
+        #header,
+        #footer {
+            flex-basis: 100%;
+            /*shorthand*/
+            /*flex: 1 100%;*/
+        }
+
+        .aside {
+            flex-basis: auto;
+            flex-grow: 1;
+            /*shorthand*/
+            /*flex: 1 auto; */
+        }
+
+        #main {
+            flex-grow: 5;
+            flex-basis: 0%;
+            /*shorthand*/
+            /*flex: 5;*/
+        }
+
+        #header,
+        #footer,
+        .aside,
+        #main {
+            padding: 10px;
+        }
+
+        #header {
+            background-color: #5D7586;
+        }
+
+        #main {
+            background-color: #914E67;
+            text-align: left;
+        }
+
+        #main>h2 {
+            text-align: center;
+        }
+
+        #footer {
+            background-color: #444142;
+        }
+
+        #aside-1 {
+            background-color: #535c63;
+        }
+
+        #aside-2 {
+            background-color: #566875;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <h2>Header</h2>
+        </header>
+        <aside class="aside" id="aside-1">
+            <h2>Aside 1</h2>
+        </aside>
+        <div id="main">
+            <h2>Main</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium varius varius. Duis volutpat
+                elementum neque, sed congue neque luctus ut. Nunc ligula lacus, hendrerit eget urna finibus, tristique
+                ullamcorper nulla. Pellentesque congue laoreet eros. Nunc sit amet ipsum id ex rhoncus ornare quis eu
+                mi. Morbi ac finibus odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc mattis
+                tempus tempor. Etiam at neque sed nisl ornare semper pharetra non sapien. Praesent pellentesque, ipsum a
+                fermentum fermentum, sapien dui pharetra felis, in dictum arcu urna in nibh. Aliquam pulvinar
+                pellentesque nisl, pharetra ultricies mauris auctor vel. Aliquam erat volutpat. Vestibulum suscipit ut
+                ligula finibus semper. In hac habitasse platea dictumst. Fusce ante nisi, auctor vel fermentum sed,
+            tincidunt non ex. </p>
+        </div>
+        <aside class="aside" id="aside-2">
+            <h2>Aside 2</h2>
+        </aside>
+        <footer id="footer">
+            <h2>Footer</h2>
+        </footer>
+    </div>
+
+</body>
+
+</html>

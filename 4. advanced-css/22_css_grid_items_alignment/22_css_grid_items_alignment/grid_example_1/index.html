@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Grid using CSS Grid</title>
+        <style>
+            .container {
+                max-width: 960px;
+                width: 90%;
+                margin: 0 auto;
+
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(144px, 1fr));
+                grid-gap: 8px;
+            }
+
+            .box {
+                height: 144px;
+                background-color: #914E67;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Grid Alignment</title>
+        <style>
+            #grid1 {
+                display: grid;
+                grid-template-columns: 160px 160px 160px;
+                grid-auto-rows: minmax(100px, 150px);
+                gap: 16px;
+                height: 50vh;
+            }
+
+            #grid1>div {
+                background-color: #914E67;
+                color: white;
+
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="grid1">
+            <div>One</div>
+            <div>Two</div>
+            <div>Three</div>
+            <div>Four</div>
+            <div>Five</div>
+            <div>Six</div>
+        </div>
+    </body>
+
+</html>

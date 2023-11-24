@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Variables Inheritance</title>
+    <style>
+
+        body{
+            font-family: sans-serif;
+            font-size: 22px;
+        }
+
+        #box-2 {
+          --text-color: blue;
+      }
+
+      #box-3 {
+          --text-color: red;
+      }
+
+      #box-1 {
+        color: var(--text-color, gray);
+    }
+
+    #box-2 {
+        color: var(--text-color);
+    }
+
+    #box-3 {
+        color: var(--text-color);
+    }
+
+    #box-4 {
+        color: var(--text-color);
+    }
+
+</style>
+</head>
+
+<body>
+    <div id="box-1">
+        I am box 1.
+        <div id="box-2">
+            I am box 2.
+            <div id="box-3">I am box 3.</div>
+            <div id="box-4">I am box 4.</div>
+        </div>
+    </div>
+</body>
+
+</html>

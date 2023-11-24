@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout Example</title>
+    <style>
+
+        body {
+            font-family: sans-serif;
+            color: white;
+        }
+
+        #grid-container {
+          display: grid;
+          grid-gap: 8px;
+          grid-template-columns: 1fr 3fr;
+          grid-template-areas:
+          "header  header"
+          "sidebar content"
+          "footer  footer";
+
+      }
+
+    header, article aside, footer {
+        padding: 16px;
+    }
+
+    header {
+        grid-area: header;
+        background-color: #5D7586;
+    }
+
+    article {
+        grid-area: content;
+        background-color: #914E67;
+    }
+
+    aside {
+        grid-area: sidebar;
+        background-color: #37424c;
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: #6d4856;
+    }
+
+
+</style>
+</head>
+
+<body>
+    <div id="grid-container">
+        <header>Header</header>
+        <article>
+            <h1>Article Title</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida, enim nec fermentum ullamcorper, eros metus rhoncus ante, in ornare arcu purus id est. Duis viverra mi felis, nec feugiat tortor scelerisque ut. Ut efficitur ac ipsum a viverra.</p>
+        </article>
+        <aside>
+            <h1>Sidebar</h1>
+            <ul>
+                <li>consectetur</li>
+                <li>phasellus</li>
+                <li>ullamcorper</li>
+                <li>efficitur</li>
+                <li>viverra</li>
+            </ul>
+        </aside>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

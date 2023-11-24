@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Content - Images</title>
+        <style>
+            img {
+                width: 100%;
+            }
+
+            #hero {
+                width: 600px;
+                height: 400px;
+                background-image: url("tokyo-2048w.jpg");
+            }
+
+            @media screen and (max-width: 1024px) {
+                #hero {
+                    background-image: url("tokyo-1024w.jpg");
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                #hero {
+                    background-image: url("tokyo-768w.jpg");
+                }
+            }
+
+            @media screen and (max-width: 414px) {
+                #hero {
+                    background-image: url("tokyo-414w.jpg");
+                }
+            }
+
+            @media only screen and (min-resolution: 2dppx) and (max-width: 414px) {
+
+                #hero {
+                    background-image: url("tokyo-414w@2.jpg");
+                }
+            }
+
+            @media only screen and (min-resolution: 3dppx) and (max-width: 414px) {
+
+                #hero {
+                    background-image: url("tokyo-414w@3.jpg");
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!--<img srcset="tokyo-414w.jpg 414w,
+                     tokyo-768w.jpg 768w,
+                     tokyo-1024w.jpg 1024w,
+                     tokyo-2048w.jpg 2048w"
+             sizes="(max-width: 414px) 414px,
+                    (max-width: 768px) 768px,
+                    (max-width: 1024px) 1024px,
+                    1280px"
+             src="tokyo-1024w.jpg" alt="Tokyo Neon Lights">-->
+
+
+
+
+        <!--<img srcset="tokyo-414w.jpg,
+                         tokyo-828w.jpg 2x,
+                         tokyo-1242w.jpg 3x"
+                 src="tokyo-828w.jpg" alt="Tokyo Neon Lights">-->
+
+        <picture>
+            <source srcset="tokyo-414w.jpg" media="(max-width: 414px)">
+            <source srcset="tokyo-768w.jpg" media="(max-width: 768px)">
+            <source srcset="tokyo-1024w.jpg" media="(max-width: 1024px)">
+            <source srcset="tokyo-2048w.jpg" media="(max-width: 2048px)">
+            <img src="tokyo-1024w.jpg" />
+        </picture>
+
+    </body>
+
+</html>

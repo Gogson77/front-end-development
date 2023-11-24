@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Grid Configuration</title>
+        <style>
+            body {
+                font-family: sans-serif;
+            }
+
+
+            #grid1 {
+                display: grid;
+                grid-template-columns: 160px 160px 160px;
+                grid-template-rows: 160px 160px;
+                column-gap: 16px;
+                row-gap: 8px;
+
+                grid-template-areas:
+                    "a a ."
+                    ". b b";
+            }
+
+            #box-1 {
+
+                height: 120px;
+                background-color: blueviolet;
+                color: white;
+                text-align: center;
+                line-height: 120px;
+
+                grid-area: a;
+            }
+
+            #box-2 {
+                height: 120px;
+                background-color: rgb(29, 175, 119);
+                color: white;
+                text-align: center;
+                line-height: 120px;
+
+                grid-area: b;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="grid1">
+            <div id="box-1">Area 1</div>
+            <div id="box-2">Area 2</div>
+        </div>
+    </body>
+
+</html>

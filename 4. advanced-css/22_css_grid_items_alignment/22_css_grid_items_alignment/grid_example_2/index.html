@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Grid using CSS Grid</title>
+        <style>
+            .container {
+                max-width: 960px;
+                width: 90%;
+                margin: 0 auto;
+
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-gap: 8px;
+            }
+
+            .box {
+                height: 144px;
+                background-color: #914E67;
+            }
+
+            @media screen and (max-width: 1024px) {
+                .container {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                .container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media screen and (max-width: 414px) {
+                .container {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </body>
+
+</html>
