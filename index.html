@@ -1,12 +1,74 @@
-<h1>ITAcademy Introduction to Frontend Javscript Development</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet adipisci modi temporibus! Necessitatibus fuga, delectus laudantium est veniam quas voluptatibus molestiae! Laudantium, illo quia quas maiores consequuntur repellendus? Enim, earum.</p>
-<br>
-<h2>Coding with:</h2>
-<ul>
-    <li>HTML</li>
-    <li>CSS</li>
-</ul>
-<h2>Programming Language:</h2>
-<ul>
-    <li>Javascript</li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegantna Back Arrow</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            font-family: sans-serif;
+            text-align: center;
+            color: white;
+
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #050210;
+        }
+
+        .back-arrow-container {
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        .back-arrow {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid white;
+            transform: rotate(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="intro-section">
+        <h1>Section 1</h1>
+        <h1>ITAcademy Introduction to Frontend Javscript Development</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet adipisci modi temporibus! Necessitatibus fuga,
+            delectus laudantium est veniam quas voluptatibus molestiae! Laudantium, illo quia quas maiores consequuntur
+            repellendus? Enim, earum.</p>
+        <br>
+        <a id="scroll-down-arrow" href="#next-section"></a>
+    </div>
+
+    <div id="next-section">
+        <h1>Section 2</h1>
+        <h2>Coding with:</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+        <h2>Programming Language:</h2>
+        <ul>
+            <li>Javascript</li>
+        </ul>
+        <a id="scroll-up-arrow" href="#intro-section"></a>
+    </div>
+
+    <div class="back-arrow-container">
+        <div class="back-arrow">
+            <a href="index.html"></a>
+        </div>
+    </div>
+</body>
+
+</html>
