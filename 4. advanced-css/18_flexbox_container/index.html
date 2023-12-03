@@ -6,31 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox Intro</title>
     <style>
-    #flexbox1 {
-        display: flex;
-        border: 1px solid black;
-    }
-
-    #flexbox1 > div {
-        width: 80px;
-        height: 80px;
-        margin: 5px;
-    }
-
-    #flexbox1 > div:nth-child(1) {
-        background-color: #F0C419;
-    }
-
-    #flexbox1 > div:nth-child(2) {
-        background-color: #4FBA6F;
-    }
-
-    #flexbox1 > div:nth-child(3) {
-        background-color: #ED7161;
-    }
-
-
-</style>
+        #flexbox1 {
+            border: 1px solid black;
+            display: flex;
+            height: 50vh;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: space-evenly;
+        }
+        #flexbox1>div {
+            width: 80px;
+            height: 80px;
+            margin: 5px;
+            text-align: center;
+            line-height: 80px;
+        }
+        #flexbox1>div:nth-child(1) {
+            background-color: #F0C419;
+        }
+        #flexbox1>div:nth-child(2) {
+            background-color: #4FBA6F;
+        }
+        #flexbox1>div:nth-child(3) {
+            background-color: #ED7161;
+        }
+        #flexbox1>div:nth-child(4) {
+            background-color: rgb(25, 218, 240);
+        }
+        #flexbox1>div:nth-child(5) {
+            background-color: #bab34f;
+        }
+        #flexbox1>div:nth-child(6) {
+            background-color: #ed61ca;
+        }
+    </style>
 </head>
 
 <body>
