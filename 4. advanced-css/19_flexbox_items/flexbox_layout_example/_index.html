@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            margin: 0px;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        #wrapper {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        #header {
+            flex-basis: 100%;
+            background-color: #5D7586;
+        }
+
+        #aside-1 {
+            flex-basis: auto;
+            flex-grow: 1;
+            background-color: #535c63;
+        }
+
+        #main {
+            flex-basis: 0%;
+            flex-grow: 5;
+            background-color: #914E67;
+        }
+
+        #main>p {
+            text-align: left;
+        }
+
+        #aside-2 {
+            flex-basis: auto;
+            flex-grow: 1;
+            background-color: #566875;
+        }
+
+        #header, #aside-1, #aside-2, #main, #footer {
+            padding: 8px;
+        }
+
+        #footer {
+            flex-basis: 100%;
+            background-color: #444142;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <h2>Header</h2>
+        </header>
+        <aside class="aside" id="aside-1">
+            <h2>Aside 1</h2>
+        </aside>
+        <div id="main">
+            <h2>Main</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis quis accusamus, officia voluptatibus
+                aliquam illum recusandae blanditiis laborum quas vero laboriosam veritatis! Consequatur animi facilis
+                accusantium voluptates iste dignissimos alias laborum, illum quae voluptate commodi omnis consectetur,
+                molestias quo veritatis corporis nulla nobis. Voluptatibus, repellat. Voluptate quaerat voluptates neque
+                labore est in saepe ipsa facere corporis, architecto dolores repudiandae ipsum earum aspernatur incidunt
+                fuga voluptas! Ratione aperiam adipisci excepturi temporibus quia provident aut, modi sint facilis, ab
+                voluptatem at laudantium facere nostrum possimus saepe, nemo id minima assumenda? Rerum mollitia
+                suscipit nihil unde? Dolorum ducimus necessitatibus ab et similique esse tenetur sed distinctio
+                voluptate cupiditate tempora perferendis magnam cumque, in saepe beatae assumenda libero eligendi
+                laudantium est culpa corrupti atque!</p>
+        </div>
+        <aside class="aside" id="aside-2">
+            <h2>Aside 2</h2>
+        </aside>
+        <footer id="footer">
+            <h2>Footer</h2>
+        </footer>
+    </div>
+</body>
+
+</html>
