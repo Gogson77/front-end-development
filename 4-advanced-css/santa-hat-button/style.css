@@ -34,6 +34,10 @@ body {
     }
 }
 
+.button:hover{
+    cursor: pointer;
+}
+
 .button-hat {
     position: absolute;
     top: -15px;
