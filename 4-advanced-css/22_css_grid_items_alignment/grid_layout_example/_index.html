@@ -13,42 +13,39 @@
         }
 
         #grid-container {
-          display: grid;
-          grid-gap: 8px;
-          grid-template-columns: 1fr 3fr;
-          grid-template-areas:
-          "header  header"
-          "sidebar content"
-          "footer  footer";
+            display: grid;
+            grid-gap: 8px;
+            grid-template-columns: 1fr 3fr;
+            grid-template-areas: 
+            "header header"
+            "sidebar content" 
+            "footer footer";
+        }
 
-      }
+        header, article, aside, footer {
+            padding: 16px;
+        }
 
-    header, article aside, footer {
-        padding: 16px;
-    }
+        header {
+            grid-area: header;
+            background-color: #5D7586;
+        }
 
-    header {
-        grid-area: header;
-        background-color: #5D7586;
-    }
+        article {
+            grid-area: content;
+            background-color: #914E67;
+        }
 
-    article {
-        grid-area: content;
-        background-color: #914E67;
-    }
+        aside {
+            grid-area: sidebar;
+            background-color: #37423C;
+        }
 
-    aside {
-        grid-area: sidebar;
-        background-color: #37424c;
-    }
-
-    footer {
-        grid-area: footer;
-        background-color: #6d4856;
-    }
-
-
-</style>
+        footer {
+            grid-area: footer;
+            background-color: #6D4856;
+        }
+    </style>
 </head>
 
 <body>
@@ -67,7 +64,6 @@
                 <li>efficitur</li>
                 <li>viverra</li>
             </ul>
-        </ul>
         </aside>
         <footer>Footer</footer>
     </div>
