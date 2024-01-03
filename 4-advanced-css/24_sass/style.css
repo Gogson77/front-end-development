@@ -1,7 +1,6 @@
-.box {
-  width: 62.5%;
-  height: 400px;
-  background-color: blue;
+body {
+  font-size: 18px;
+  color: #c2bbbd;
 }
 
 /*# sourceMappingURL=style.css.map */

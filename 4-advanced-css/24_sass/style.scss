@@ -1,5 +1,7 @@
-.box {
-  width: 600px / 960px * 100%;
-  height: 400px;
-  background-color: blue;
+@import "colors";
+@import "values";
+
+body {
+  font-size: $main-font-size;
+  color: $primary-light-color;
 }
