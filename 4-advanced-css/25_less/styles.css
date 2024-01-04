@@ -1,3 +1,6 @@
-body {
-  font-family: sans-serif;
+@import "common.css";
+@media (min-width: 320px) {
+  .box {
+    width: 300px;
+  }
 }
