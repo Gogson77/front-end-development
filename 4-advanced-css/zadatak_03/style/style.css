@@ -31,7 +31,7 @@ body {
   height: auto;
 }
 
-.gallery-thumbnail p, h3 {
+.gallery-thumbnail p {
   margin: 10px 0;
   font-weight: 100;
 }
