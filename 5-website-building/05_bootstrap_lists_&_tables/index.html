@@ -9,7 +9,188 @@
 </head>
 
 <body>
-  
+  <form>
+    <div class="form-row">
+      <div class="col-lg-2 col-sm-4">
+        <div class="form-group">
+          <label>Gender:</label>
+          <div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" name="gender" type="radio" id="male" value="male" checked="checked">
+              <label class="form-check-label" for="male">Mr</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" name="gender" type="radio" id="female" value="female" checked="checked">
+              <label class="form-check-label" for="female">Mrs</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-sm-8">
+        <div class="form-group">
+          <label for="name">Name: </label>
+          <input class="form-control" type="text" id="name" name="name">
+        </div>
+      </div>
+      <div class="col-lg-5 col-sm-12">
+        <div class="form-group">
+          <label for="email">Email: </label>
+          <input class="form-control" type="email" id="email" name="email">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="address">Address: </label>
+          <input class="form-control" type="text" id="address" name="address">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="country">Country: </label>
+          <select class="form-control" name="country" id="country">
+            <option value="Serbia">Serbia</option>
+            <option value="Romania" selected="selected">Romania</option>
+            <option value="Ukraine">Ukraine</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Comment: </label>
+      <textarea class="form-control" name="comment" id="comment">Lorem ipsum dolor sit amet.</textarea>
+    </div>
+
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="newsletter" value="yes" id="newsletter">
+        <label class="form-check-label" for="newsletter">I would like to receive
+          newsletter.</label>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Send</button>
+  </form>
+
+  <!-- <h2>form-inline</h2> -->
+  <!-- <form class="form-inline">
+      <input class="form-control m-2" type="text" id="name" name="name" placeholder="name">
+      <input class="form-control m-2" type="email" id="email" name="email" placeholder="email">
+      <button class="btn btn-primary" type="submit">Subscribe</button>
+    </form> -->
+
+  <!-- <form action="">
+    <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
+    <input class="form-control" type="text" placeholder="default text input">
+    <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
+  </form>
+  <hr>
+  <form>
+    <div>
+      <label for="">Gender:</label>
+      <div class="form-check">
+        <input class="form-check-input" name="gender" type="radio" id="male" value="male" checked="checked">
+        <label class="form-check-label" for="male">Mr</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" name="gender" type="radio" id="female" value="female">
+        <label class="form-check-label" for="female">Mrs</label>
+      </div>
+    </div>
+    <hr>
+    <div>
+      <label for="">In/Out of country voters:</label>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" name="inout" type="radio" id="in" value="in" checked="checked">
+        <label class="form-check-label" for="in">in</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" name="inout" type="radio" id="out" value="out">
+        <label class="form-check-label" for="out">out</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Name: </label>
+      <input class="form-control" type="text" id="name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email: </label>
+      <input class="form-control" type="email" id="email" name="email">
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address: </label>
+      <input class="form-control" type="text" id="address" name="address">
+    </div>
+
+    <div class="form-group">
+      <label for="country">Country: </label>
+      <select name="country" id="country">
+        <option value="Serbia">Serbia</option>
+        <option value="Romania" selected="selected">Romania</option>
+        <option value="Ukraine">Ukraine</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Comment: </label>
+      <textarea class="form-control" name="comment" id="comment">Lorem ipsum dolor sit amet.</textarea>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="newsletter" value="yes" id="newsletter">
+      <label class="form-check-label" for="newsletter">I would like to receive newsletter.</label>
+    </div>
+
+    <input class="btn btn-primary" type="submit" value="Send">
+    <hr>
+    <button class="btn btn-primary" type="submit">Send</button>
+  </form> -->
+  <!-- <hr> -->
+
+
+  <!-- <hr>
+  <button type="button" class="btn btn-primary d-block">Primary Block Button</button>
+  <hr>
+  <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button">Primary Disabled link</a>
+  <hr>
+  <button type="button" class="btn btn-primary">Regular Primary Button</button>
+  <button type="button" class="btn btn-primary" disabled>Disabled Primary button</button>
+  <hr>
+  <button type="button" class="btn btn-primary btn-sm">Button Primary btn sm</button>
+  <button type="button" class="btn btn-primary">Button Primary</button>
+  <button type="button" class="btn btn-primary btn-lg">Button Primary btn lg</button>
+  <hr>
+  <button type="button" class="btn btn-outline-primary">Primary</button>
+  <button type="button" class="btn btn-outline-secondary">Secondary</button>
+  <button type="button" class="btn btn-outline-success">Success</button>
+  <button type="button" class="btn btn-outline-danger">Danger</button>
+  <button type="button" class="btn btn-outline-warning">Warning</button>
+  <button type="button" class="btn btn-outline-info">Info</button>
+  <button type="button" class="btn btn-outline-light">Light</button>
+  <button type="button" class="btn btn-outline-dark">Dark</button>
+  <hr>
+  <a href="#" class="btn btn-primary" role="button">Link Button Primary</a>
+  <hr>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-light">Light</button>
+  <button type="button" class="btn btn-dark">Dark</button>
+  <button type="button" class="btn btn-link">Link</button>
+  <hr>
+  <button type="button">Default</button>
+  <hr>
+  <button class="btn">Default bootstrap_forms_&_buttons</button> -->
+
   <script src="js/jquery-3.7.1.slim.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
 </body>
