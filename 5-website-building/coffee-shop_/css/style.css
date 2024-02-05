@@ -1,0 +1,23 @@
+
+/************************************************HERO SECTION*********************************************/
+
+#hero-section {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero-section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #4133329c;
+    height: 100vh;
+}
+
+#hero-logo {
+    width: 256px;
+}

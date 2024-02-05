@@ -1,0 +1,191 @@
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/************************************************HEADER*********************************************/
+
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#header-logo {
+    height: 24px;
+}
+
+header a {
+    margin-left: 32px;
+    color: white;
+}
+
+header a:hover {
+    color: white;
+}
+
+header a:visited {
+    color: white;
+}
+
+
+/****************NEW NEW NEW******************/
+
+.solid-header {
+    position: fixed;
+    background-color: #c69572;
+    transition: background-color 0.5s ease;
+}
+
+
+/************************************************HERO SECTION*********************************************/
+
+#hero-section {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero-section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #4133329c;
+    height: 100vh;
+}
+
+#hero-logo {
+    width: 256px;
+}
+
+#arrow-down {
+    position: absolute;
+    bottom: 64px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: block;
+    width: 64px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    #hero-section h1 {
+        font-size: 3rem;
+    }
+    #hero-logo {
+        width: 196px;
+    }
+}
+
+
+/************************************************INTRO SECTION*********************************************/
+
+#intro-section {
+    background: #eae7de;
+}
+
+
+/************************************************ABOUT SECTION*********************************************/
+
+#about-section {}
+
+#about-bg-1 {
+    background-image: url(../img/great-place.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    min-height: 480px;
+}
+
+#about-bg-2 {
+    background-image: url(../img/fresh-beans.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    height: 640px;
+    min-height: 640px;
+}
+
+
+/************************************************MENU SECTION*********************************************/
+
+#menu-section {
+    background: #eae7de;
+}
+
+
+/************************************************CONTACT SECTION*********************************************/
+
+#contact-info-bg-1 {
+    background: linear-gradient(to right, #36313782, #36313782), url(../img/contact-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+#contact-info-bg-2 {
+    background-color: #312423a8;
+}
+
+
+/************************************************MAP SECTION*********************************************/
+
+
+/*#map-section {
+    background-image : url(../img/map-demo.png);
+    background-repeat: no-repeat;
+    background-size  : cover;
+    height           : 460px;
+}*/
+
+#map {
+    height: 480px;
+}
+
+
+/************************************************FOOTER SECTION*********************************************/
+
+footer {
+    background: #312423;
+}
+
+
+/************************************************MOBILE MENU*********************************************/
+
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #312423ed;
+    z-index: 2;
+    display: none;
+}
+
+#mobile-menu a {
+    color: white;
+}
+
+#mobile-menu a:hover {
+    color: rgb(175, 171, 171);
+}
+
+#mobile-menu #close-btn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+
+@media (max-width: 576px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 1200px) {}
