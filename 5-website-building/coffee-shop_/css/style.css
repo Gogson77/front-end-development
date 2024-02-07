@@ -21,3 +21,13 @@
 #hero-logo {
     width: 256px;
 }
+
+#arrow-down {
+    position: absolute;
+    bottom: 64px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    display: block;
+    width: 64px;
+}
