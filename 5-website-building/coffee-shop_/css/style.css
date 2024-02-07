@@ -1,3 +1,28 @@
+/************************************************HEADER*********************************************/
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#header-logo {
+    height: 24px;
+}
+
+header a {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+
 
 /************************************************HERO SECTION*********************************************/
 
@@ -22,6 +47,14 @@
     width: 256px;
 }
 
+#hero-section>div>div>div {
+    z-index: 1;
+}
+
+#hero-section>div>div>div>h1 {
+    font-weight: bold;
+}
+
 #arrow-down {
     position: absolute;
     bottom: 64px;
@@ -30,4 +63,6 @@
     margin: 0 auto;
     display: block;
     width: 64px;
+    color: white;
+    z-index: 3;
 }
