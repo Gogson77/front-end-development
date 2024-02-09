@@ -1,4 +1,8 @@
-/************************************************HEADER*********************************************/
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+/************************************************ HEADER *********************************************/
 header {
     position: absolute;
     left: 0;
@@ -12,6 +16,7 @@ header {
 
 header a {
     color: white;
+    margin-left: 24px;
 }
 
 a:hover {
@@ -22,9 +27,7 @@ a:visited {
     color: white;
 }
 
-
-
-/************************************************HERO SECTION*********************************************/
+/************************************************ HERO SECTION *********************************************/
 
 #hero-section {
     background-image: url(../img/hero.jpg);
@@ -65,4 +68,50 @@ a:visited {
     width: 64px;
     color: white;
     z-index: 3;
+}
+
+/************************************************ INTRO SECTION *********************************************/
+
+#intro-section {
+    background: #eae7de;
+}
+
+#intro-section > div > div.row.justify-content-center > div > h1 {
+    font-weight: bold;
+}
+
+#intro-section > div > div.row.py-5 > div:nth-child(1) > p {
+    font-weight: bold;
+}
+
+#intro-section > div > div.row.py-5 > div:nth-child(2) > p {
+    font-weight: bold;
+}
+
+#intro-section > div > div.row.py-5 > div:nth-child(3) > p {
+    font-weight: bold;
+}
+
+/************************************************ ABOUT SECTION *********************************************/
+
+#about-bg-1 {
+    background-image: url(../img/great-place.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    min-height: 480px;
+}
+
+#about-bg-2 {
+    background: url(../img/fresh-beans.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    height: 640px;
+}
+
+/************************************************ MENU SECTION *********************************************/
+
+#menu-section {
+    background: #eae7de;
 }
