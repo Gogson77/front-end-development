@@ -27,6 +27,10 @@ a:visited {
     color: white;
 }
 
+#menu-icon {
+    width: 32px;
+}
+
 /************************************************ HERO SECTION *********************************************/
 
 #hero-section {
@@ -54,10 +58,6 @@ a:visited {
     z-index: 1;
 }
 
-#hero-section>div>div>div>h1 {
-    font-weight: bold;
-}
-
 #arrow-down {
     position: absolute;
     bottom: 64px;
@@ -76,22 +76,6 @@ a:visited {
     background: #eae7de;
 }
 
-#intro-section > div > div.row.justify-content-center > div > h1 {
-    font-weight: bold;
-}
-
-#intro-section > div > div.row.py-5 > div:nth-child(1) > p {
-    font-weight: bold;
-}
-
-#intro-section > div > div.row.py-5 > div:nth-child(2) > p {
-    font-weight: bold;
-}
-
-#intro-section > div > div.row.py-5 > div:nth-child(3) > p {
-    font-weight: bold;
-}
-
 /************************************************ ABOUT SECTION *********************************************/
 
 #about-bg-1 {
@@ -108,7 +92,21 @@ a:visited {
     background-size: cover;
     background-position: left;
     height: 640px;
+    position: relative;
 }
+
+@media (max-width: 768px) {
+    #about-bg-2::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #080707bd;
+    }
+}
+
 
 /************************************************ MENU SECTION *********************************************/
 
@@ -139,4 +137,15 @@ footer {
 
 footer a img {
     width: 32px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+
+    #social-icons {
+        text-align: center !important;
+        margin-top: 8px;
+    }
 }
