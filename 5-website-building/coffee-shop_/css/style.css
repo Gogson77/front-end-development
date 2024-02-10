@@ -115,3 +115,28 @@ a:visited {
 #menu-section {
     background: #eae7de;
 }
+
+/************************************************ CONTACT SECTION *********************************************/
+
+#contact-info-bg-1 {
+    background: linear-gradient(to right, #36313782, #36313782), url(../img/contact-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+#contact-info-bg-2 {
+    background-color: #312423a8;
+}
+
+/************************************************ MAP SECTION *********************************************/
+
+/************************************************ FOOTER *********************************************/
+
+footer {
+    background: #312423;
+}
+
+footer a img {
+    width: 32px;
+}
