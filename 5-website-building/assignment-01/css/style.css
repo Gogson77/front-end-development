@@ -6,5 +6,62 @@
   margin-bottom: 5px;
 }
 
-
 /************************************************ HERO SECTION *********************************************/
+/* height: 100vh;
+background-image: url(../imgs/hero.jpg);
+background-repeat: no-repeat;
+background-size: contain; */
+
+#hero-image {
+  height: 100%;
+  width: 100%;
+}
+
+#hero-label {
+  /* background-color: #63c38f; */
+  background-color: #3f78598c;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+  
+
+/** Extra Small <576px **/
+@media (max-width: 575px) {
+  #hero-label {
+
+    font-size: 8px;
+  }
+}
+
+/** Small ≥576px **/
+@media (min-width: 576px){
+  #hero-label {
+
+  }
+}
+
+/** Medium ≥768px **/
+@media (min-width: 768px){
+  #hero-label {
+
+  }
+}
+
+/** Large ≥992px **/
+@media (min-width: 992px){
+  #hero-label {
+
+    }
+}
+
+/** Extra Large ≥1200px **/
+@media (min-width: 1200px){
+  #hero-label {
+  }
+}
+
+/* top: 80px;
+left: 90px; */
+  /* p-4 fw-bold */
