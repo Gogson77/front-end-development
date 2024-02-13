@@ -21,13 +21,7 @@
 }
 
 /************************************************ HERO SECTION *********************************************/
-/* height: 100vh;
-background-image: url(../imgs/hero.jpg);
-background-repeat: no-repeat;
-background-size: contain; */
-
 #hero-image {
-  height: 100%;
   width: 100%;
 }
 
@@ -38,41 +32,53 @@ background-size: contain; */
   margin: 0;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
   text-align: center;
+  width: 100%;
 }
 
 
 /** Extra Small <576px **/
 @media (max-width: 575px) {
-  
-  
   #hero-label {
-    font-size: 8px;
+    /* font-size: 14px;
+    left: 1%;
+    top: 32%; */
+    /* width: 50%; */
   }
 }
 
 /** Small ≥576px **/
 @media (min-width: 576px) {
-  #hero-label {}
+  #hero-label {
+    /* left: 3%;
+    top: 32%; */
+    /* width: 50%; */
+  }
 }
-
 /** Medium ≥768px **/
 @media (min-width: 768px) {
-  #hero-label {}
+  #hero-label {
+    /* font-size: 17px; */
+    /* width: 50%; */
+  }
 }
-
 /** Large ≥992px **/
 @media (min-width: 992px) {
-  #hero-label {}
+  #hero-label {
+    /* left: 27%;
+    top: 22%; */
+    /* width: 56%; */
+  }
 }
-
 /** Extra Large ≥1200px **/
 @media (min-width: 1200px) {
   #hero-label {
-    /* top: 80px;
-    left: 90px; */
-    /* p-4 fw-bold */
+    /* font-size: 19px;
+    left: 29%;
+    top: 22%; */
+    /* width: 48%; */
+
   }
 }
 
