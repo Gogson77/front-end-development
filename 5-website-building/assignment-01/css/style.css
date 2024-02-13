@@ -90,14 +90,12 @@ background-size: contain; */
 
 #recent-section a:hover,
 #blog-section a:hover {
-  color: darkgray;
+  color: rgba(0, 0, 0, 0.485);
 }
 
 #recent-section a:active,
 #blog-section a:active {
-  color: black;
   text-decoration: underline;
-  text-decoration-color: darkgray;
 }
 
 /************************************************ BLOG SECTION *********************************************/
@@ -106,4 +104,21 @@ background-size: contain; */
 /************************************************ FOOTER  *********************************************/
 footer {
   background-color: black;
+}
+
+footer a {
+  color:white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: darkgray;
+}
+
+footer a:active {
+  text-decoration: underline; 
+}
+
+footer hr {
+  margin: 8px 0;
 }
