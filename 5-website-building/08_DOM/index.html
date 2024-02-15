@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Object Model</title>
+</head>
+
+<body>
+  <!-- <div id="div-1">
+    <p id="p-1">Text 1</p>
+    <p id="p-2">Text 2</p>
+    <p>Text 3</p>
+  </div> -->
+
+  <!-- <p id="my-class">Text 1</p>
+  <p class="my-class">Text 2</p>
+  <p class="my-class some-other-class">Text 3</p>
+  <p>Text 4</p>
+  <p>Text 5</p>
+  <p class="your-class">Text 6</p> -->
+
+    <ul>
+      <li>Item 1</li>
+      <li id="my-id">Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+  <script>
+
+    // var item = document.querySelector("#my-id");
+    // var item = document.querySelector("li");
+    var items = document.querySelectorAll("li");
+
+    // console.log(items.innerHTML);
+    console.log(items.length);
+
+    // var items = document.getElementsByTagName("li");
+    // console.log(items.length);
+
+    // var paragraphs = document.getElementsByClassName('my-class');
+    // for (let i = 0; i < paragraphs.length; i++) {
+    //   console.log(paragraphs[i].innerHTML);      
+    // }
+
+    // var paragraph = document.getElementById('p-2');
+    // alert(paragraph.innerHTML);
+    // window.document
+    // document.title = "Hello World!";
+  
+  </script>
+</body>
+
+</html>
