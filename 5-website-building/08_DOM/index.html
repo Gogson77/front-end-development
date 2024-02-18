@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document Object Model</title>
 </head>
+<style>
+  .blue-text {
+    color: blue;
+  }
+</style>
 
 <body>
   <!-- <div id="div-1">
@@ -21,34 +26,83 @@
   <p>Text 5</p>
   <p class="your-class">Text 6</p> -->
 
-    <ul>
+  <!-- <ul>
       <li>Item 1</li>
       <li id="my-id">Item 2</li>
       <li>Item 3</li>
-    </ul>
+    </ul> -->
 
+  <!-- <p id="the-paragraph" class="my-class">Text 1</p> -->
+
+  <!-- <input type="text" name="firstname" id="first-name" value="I want to be button"> -->
+
+  <!-- <p id="the-paragraph" class="my-class blue-text">Text 1</p> -->
+
+  <!-- <p id="the-paragraph" class="my-class blue-text">Non-dynamic paragraph.</p> -->
+  
+  <!-- <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul> -->
+
+  <p id="the-paragraph" class="my-class blue-text">Non-dynamic paragraph.</p>
+  
   <script>
+
+    var newParagraph = document.createElement("p");
+    var newContent = document.createTextNode("This is dynamically generated paragraph!");
+    newParagraph.appendChild(newContent);
+    
+    var oldParagraph = document.getElementById("the-paragraph");
+    document.body.replaceChild(newParagraph, oldParagraph);
+    
+      // var list = document.getElementById("myList");
+      // list.removeChild(list.children[1]);
+
+    // var newParagraph = document.createElement("p");
+    // var newContent = document.createTextNode("This is dynamically generated paragraph!");
+    // newParagraph.appendChild(newContent);
+    // var oldParagraph = document.getElementById("the-paragraph");
+    // document.body.insertBefore(newParagraph, oldParagraph);
+
+    // var paragraph = document.getElementById('the-paragraph');
+    // paragraph.classList.add("blue-text");
+    // paragraph.classList.remove("blue-text");
+
+
+
+    // paragraph.style.color = "blue";
+
+    // var input = document.getElementById('first-name');
+    // input.setAttribute('type','button');
+
+    // var paragraph = document.getElementById('the-paragraph');
+    // console.log("Original paragraph content was: " + paragraph.innerHTML);
+    // paragraph.innerHTML = "New text set using innerHtml property."
+    // console.log("Id: " + paragraph.id);
+    // console.log("Class: " + paragraph.className);
 
     // var item = document.querySelector("#my-id");
     // var item = document.querySelector("li");
-    var items = document.querySelectorAll("li");
+    // var items = document.querySelectorAll("li");
 
     // console.log(items.innerHTML);
-    console.log(items.length);
+    // console.log(items.length);
 
     // var items = document.getElementsByTagName("li");
     // console.log(items.length);
 
     // var paragraphs = document.getElementsByClassName('my-class');
     // for (let i = 0; i < paragraphs.length; i++) {
-    //   console.log(paragraphs[i].innerHTML);      
+    //   console.log(paragraphs[i].innerHTML);
     // }
 
     // var paragraph = document.getElementById('p-2');
     // alert(paragraph.innerHTML);
     // window.document
     // document.title = "Hello World!";
-  
+
   </script>
 </body>
 
