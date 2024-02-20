@@ -5,14 +5,119 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Events</title>
+  <style>
+    /* #my-div {
+      height: 300px;
+      background-color: blueviolet;
+      font-family: sans-serif;
+      font-size: 28px;
+      text-align: center;
+      color: white;
+      line-height: 300px;
+    } */
+
+    #div1 {
+      width: 400px;
+      height: 400px;
+      background-color: #ABD486;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #div2 {
+      width: 300px;
+      height: 300px;
+      background-color: #5DC2B0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #div3 {
+      width: 200px;
+      height: 200px;
+      background-color: #F06270;
+    }
+  </style>
 </head>
 
 <body>
   <!-- <button onclick="alert('You clicked me!')">Click me</button> -->
-
   <!-- <button id="the-button">Click me!</button> -->
+  <!-- <div id="my-div">Hello! I am div. You can click me!</div> -->
+  <!-- <div id="my-div">Hello! I am div. Hover me!</div> -->
+  <!-- <div id="my-div">Hello! I am div. You can click me!</div> -->
+  <!-- <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul> -->
+  <!-- <a href="http://link-group.eu" id="the-link">Link Group</a> -->
+
+  <div id="div1">
+    <div id="div2">
+      <div id="div3"></div>
+    </div>
+  </div>
 
   <script>
+
+    var div1 = document.getElementById("div1");
+    var div2 = document.getElementById("div2");
+    var div3 = document.getElementById("div3");
+
+    div1.addEventListener("click", eventHandler, true);
+    div2.addEventListener("click", eventHandler, true);
+    div3.addEventListener("click", eventHandler, true);
+
+    function eventHandler(e){
+      console.log("Hello from " + this.id);
+      e.stopPropagation(e);
+    };
+
+    // var link = document.getElementById("the-link");
+    // link.addEventListener("click", preventDefaultEvent);
+    // function preventDefaultEvent(e){
+    //   e.preventDefault();
+    //   console.log("Default event is prevented!");
+    //   return false;
+    // };
+
+    // var items = document.getElementsByTagName("li");
+    // for(let i=0; i<items.length; i++){
+    //   items[i].addEventListener("click", function(e){
+    //     alert(e.target.innerHTML);
+    //   });
+    // }
+
+    // var div = document.getElementById("my-div");
+    // div.addEventListener("click", function (e) {
+    //   console.log(e.target);
+    // });
+
+    // document.addEventListener("keydown", logKey);
+    // function logKey(e){
+    //   console.log(e.key);
+    // };
+
+    // var div = document.getElementById("my-div");
+    // let eventCounter = 0;
+    // div.addEventListener("mousemove", function(){
+    //   div.innerHTML = 'The mouse pointer is moving in div area. (' + eventCounter + ')';
+    //   eventCounter++;
+    // });
+
+    // var div = document.getElementById("my-div");
+    // div.addEventListener("click", function(){
+    //   alert("You have clicked on div!");
+    // });
+    // div.addEventListener("mouseenter", function(){
+    //   div.innerHTML = 'The mouse pointer entered the div area!';
+    // });
+    // div.addEventListener("mouseleave", function(){
+    //   div.innerHTML = 'The mouse pointer left the div area!';
+    // });
 
     // document.addEventListener("readystatechange", function () {
     //   if(document.readyState === "interactive"){
@@ -72,7 +177,7 @@
 
   </script>
 
-  <button id="the-button">Click me!</button>
+  <!-- <button id="the-button">Click me!</button> -->
 </body>
 
 </html>
