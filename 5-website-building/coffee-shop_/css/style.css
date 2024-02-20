@@ -143,9 +143,37 @@ footer a img {
     footer {
         text-align: center;
     }
-
+    
     #social-icons {
         text-align: center !important;
         margin-top: 8px;
     }
+}
+
+/************************************************ MOBILE MENU *********************************************/
+
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #312423ed;
+    z-index: 2;
+    display: none;
+}
+
+#mobile-menu a {
+    color: white;
+}
+
+#mobile-menu a:hover {
+    color: rgb(175, 171, 171);
+}
+
+#mobile-menu #close-btn {
+    position: absolute;
+    right: 29px;
+    top: 12px;
+    width: 36px;
 }
