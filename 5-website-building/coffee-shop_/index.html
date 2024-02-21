@@ -32,7 +32,7 @@
     </div>
   </div>
 
-  <header class="p-3">
+  <header id="header" class="p-3">
     <div class="container-fluid">
       <div class="row">
         <div class="col-4">
@@ -255,6 +255,28 @@
           mobileMenu.style.display = "none";
         });
       }
+
+      //for header
+
+      let heroSection = document.getElementById("hero-section");
+      let heroSectionHeight = heroSection.clientHeight;
+
+      let header = document.getElementById("header");
+
+      document.addEventListener("scroll", function () {
+
+        if (document.documentElement.scrollTop > heroSectionHeight) {
+          if (!header.classList.contains("solid-header")) {
+            header.classList.add("solid-header");
+          }
+        } else {
+          if (header.classList.contains("solid-header")) {
+            header.classList.remove("solid-header");
+          }
+        }
+      });
+
+
     });
   </script>
 </body>

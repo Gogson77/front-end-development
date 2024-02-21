@@ -31,6 +31,12 @@ a:visited {
     width: 32px;
 }
 
+.solid-header {
+    position: fixed;
+    background-color: #c69572;
+    transition: background-color 0.4s ease;
+}
+
 /************************************************ HERO SECTION *********************************************/
 
 #hero-section {
