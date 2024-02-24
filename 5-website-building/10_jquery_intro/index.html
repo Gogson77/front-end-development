@@ -52,6 +52,14 @@
       e.preventDefault();
       alert("Name: " + $("#name").val() + "\n" + "Email: " + $("#email").val());
     });
+
+    let inputs = $("input");
+    let domObject = inputs[0];
+    console.log("DomObject: " + domObject);
+    
+    let jQueryObject = inputs.eq[0];
+    console.log("jQueryObject: " + jQueryObject);
+
   </script>
 
     <!-- <script>

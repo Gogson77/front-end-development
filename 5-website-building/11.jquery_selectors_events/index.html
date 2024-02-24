@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Selectors and Events</title>
+</head>
+
+<body>
+  <!-- <h1 id="heading-1">This is heading 1</h1> -->
+
+  <!-- <p class="my-class my-other-class">Paragraph 1</p>
+  <p class="my-class">Paragraph 2</p>
+  <p>Paragraph 3</p> -->
+
+  <!-- <section id="section-1">
+    <h1 id="heading-1">This is heading 1</h1>
+    <p class="my-class">Paragraph 1</p>
+    <p class="my-class">Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <ul id="my-list">
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+    </ul>
+  </section> -->
+
+  
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script>
+    
+    $(document).ready(function () {
+
+      $("#my-button").one("click", function () {
+        alert("The element was clicked.");
+      });
+
+      // $("#my-button").on("click", function () {
+      //   alert("The element was clicked.");
+      //   $(this).off();
+      // });
+
+      // $("#my-button").on({
+      //   mouseenter: function(){
+      //     console.log("mouse entered the area of the button.");
+      //   },
+      //   mouseleave: function(){
+      //     console.log("mouse left the area of the button.");
+      //   },
+      //   click: function(){
+      //     console.log("button clicked.");
+      //   }
+      // });
+
+      // $("#my-button").on("click", function () {
+      //   alert("The element was clicked.");
+      // });
+
+      // $("#my-button").click(function () {
+      //   alert("The element was clicked.");
+      // });
+
+    });
+    
+    // let myButton = document.getElementById("my-button");
+    // myButton.addEventListener("click", function(){
+      //   alert("The element was clicked.")
+      // });
+      
+      // let elements = $("#section-1").children().first();
+      // let elements = $("#section-1").children().last();
+      // let elements = $("#section-1").children().eq(1);
+      // let elements = $("#section-1").children().filter("p");
+      // let elements = $("#section-1").children().not("p");
+      
+      // elements.each(function(){
+        //   // console.log(this.nodeName);
+        //   console.log($(this).text());
+        // });
+        
+        // let firstElem = elements.first();
+        // firstElem.each(function(){
+          //   console.log(this.nodeName);
+          // });
+          
+          
+          // let elements = $("#my-list").siblings();
+          
+          // let elements = $("#heading-1").next();
+          // let elements = $("#heading-1").nextAll();
+          // let elements = $("#heading-1").nextUntil("ul");
+          
+          // let elements = $("#my-list").prev();
+          // let elements = $("#my-list").prevAll();
+          // let elements = $("#my-list").prevUntil("h1");
+          
+          // elements.each(function(){
+            //   console.log(this.nodeName);
+            // });
+            
+            // let elements = $("#section-1").children();
+            // let elements = $("#section-1").children("p");
+            // let elements = $("#section-1").find("*");
+            // let elements = $("#section-1").find("li");
+            
+            // elements.each(function(){
+              //   console.log(this.nodeName);
+              // });
+              
+              // let elements = $("li:first-child").parentsUntil("body");
+              
+              // elements.each(function(){
+                //   console.log($(this).prop('nodeName'));
+                //   // console.log(this.nodeName);
+                // });
+                
+                
+                // let elements = $("li:first-child").parents();
+                
+                // elements.each(function(){
+                  //   console.log($(this).prop('nodeName'));
+                  //   // console.log(this.nodeName);
+                  // });
+                  
+                  // let elem = $("li:first-child").parent();
+                  // console.log(elem.attr('id'));
+                  
+                  // let paragraphs = $("p:first");
+                  // console.log(paragraphs.length);
+                  
+                  // let paragraphs = $("*");
+                  // console.log(paragraphs.length);
+                  
+                  // let paragraphs = $(".my-class");
+                  // console.log(paragraphs.length);
+                  
+                  // let paragraphs = $("p");
+                  // console.log(paragraphs.length);
+                  
+                  // let heading = $("#heading-1");
+                  // console.log(heading.text());
+                  
+                  // $("#name");
+                  // jQuery("#name");
+                  
+                  </script>
+<button id="my-button">Click me</button>
+</body>
+
+</html>
