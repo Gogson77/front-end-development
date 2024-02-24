@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Introduction</title>
+  <style>
+    input[type=text],
+    input[type=email],
+    select,
+    textarea {
+      width: 100%;
+    }
+
+    form>div {
+      margin: 16px 0 16px 0;
+    }
+
+    form>div>label {
+      font-weight: bold;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="subscribe-form" action="">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+    </div>
+
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+    </div>
+
+    <button type="submit">Subscribe</button>
+  </form>
+
+
+
+  <script src="js/jquery-3.7.1.min.js"></script>
+
+  <script>
+    $("#subscribe-form").submit(function (e) {
+      e.preventDefault();
+      alert("Name: " + $("#name").val() + "\n" + "Email: " + $("#email").val());
+    });
+  </script>
+
+    <!-- <script>
+    let subscribeForm = document.getElementById("subscribe-form");
+    subscribeForm.addEventListener("submit", function (e) {
+      let nameInput = document.getElementById("name");
+      let emailInput = document.getElementById("email");
+      alert("Name: " + nameInput.value + "\n" + "Email: " + emailInput.value);
+    });
+  </script> -->
+
+</body>
+
+</html>
