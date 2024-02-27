@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery - Content, Structure and Style manipulation</title>
+</head>
+
+<body>
+  <h1 id="heading-1">This is heading 1</h1>
+
+  <ul id="my-list">
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+  </ul>
+
+  <form id="my-form" action="">
+    <label for="name">
+      <input id="name" type="text" name="name">
+    </label>
+    <fieldset>
+      <label for="male">Male
+        <input id="male" type="radio" name="gender" value="male">
+      </label>
+      <label for="female">Female
+        <input id="female" type="radio" name="gender" value="female">
+      </label>
+    </fieldset>
+    <label for="checkbox">I would like to receive newsletter.
+      <input id="newsletter" type="checkbox" name="newsletter" value="yes">
+    </label>
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script>
+
+    $("#name").val("default value");
+
+    $("#my-form").submit(function (e) {
+
+      e.preventDefault();
+
+      let nameValue = $("#name").val();
+      let selectedGender = $("input[name=gender]:checked").val();
+      let newsletterChecked = $("#newsletter").is(":checked");
+
+      console.log(nameValue);
+      console.log(selectedGender);
+      console.log(newsletterChecked);
+
+    });
+
+    // let h1text = $("#heading-1").text("This is heading text.");
+    // let h1text = $("#heading-1").html("This is <span style='color:red;'>new</span> heading text.");
+
+    // let ulText = $("#my-list").text();
+    // let ulText = $("#my-list").html();
+    // console.log(ulText)
+
+    // let h1text = $("#heading-1").html();
+    // console.log(h1text)
+
+    // let h1text = $("#heading-1").text();
+    // console.log(h1text)
+
+  </script>
+</body>
+
+</html>
