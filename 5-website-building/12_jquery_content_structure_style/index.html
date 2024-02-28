@@ -5,17 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>jQuery - Content, Structure and Style manipulation</title>
+  <style>
+    /* .shown {
+      display: block;
+    }
+
+    .hidden {
+      display: none;
+    } */
+  </style>
 </head>
 
 <body>
-  <h1 id="heading-1">This is heading 1</h1>
 
+   <!-- <h1 id="heading-1">This is heading 1</h1>
   <ul id="my-list">
     <li>one</li>
     <li>two</li>
     <li>three</li>
   </ul>
-
   <form id="my-form" action="">
     <label for="name">
       <input id="name" type="text" name="name">
@@ -34,30 +42,73 @@
     <div>
       <input type="submit" value="Submit">
     </div>
-  </form>
+  </form>  -->
+
+  <!-- <button id="my-button">Show/Hide</button>
+
+  <p id="my-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed magnam quae odio ratione quibusdam fugiat nobis! Voluptas dicta deleniti facilis perspiciatis, ea labore repellat voluptatum. Sequi explicabo magni officia! Expedita maiores ducimus omnis alias? Harum, et nostrum vel rerum rem eos neque veritatis aspernatur alias commodi aut fugiat animi consequuntur dolorem illum? Illum labore necessitatibus, vitae dolores ipsum quam ipsam, aperiam corporis, veniam inventore voluptatem error facilis laborum libero placeat? Itaque nihil totam accusamus repudiandae aliquam obcaecati facilis iusto quia quo sapiente quas explicabo veniam, ducimus voluptatibus impedit fugit repellat illum cupiditate odio officia perferendis consectetur quasi rerum mollitia. Temporibus!</p> -->
+
+    <p id="my-paragraph">This is original HTML paragraph</p>
+    <p id="my-paragraph-2">This is another original HTML paragraph</p>
 
   <script src="js/jquery-3.7.1.min.js"></script>
+
   <script>
 
-    $("#name").val("default value");
+    $("#my-paragraph").empty();
 
-    $("#my-form").submit(function (e) {
+    // $("#my-paragraph").remove();
 
-      e.preventDefault();
+    // let newParagraph = $("<p>This is dynamically created paragraph.</p>")
+    // $("#my-paragraph").after(newParagraph);
 
-      let nameValue = $("#name").val();
-      let selectedGender = $("input[name=gender]:checked").val();
-      let newsletterChecked = $("#newsletter").is(":checked");
+    // $("body").prepend(newParagraph);
+    // $("body").append(newParagraph);
 
-      console.log(nameValue);
-      console.log(selectedGender);
-      console.log(newsletterChecked);
+    // $("#my-paragraph").append("*new text");
+    // let myParagraph = $("#my-paragraph");
 
-    });
+    // myParagraph.addClass("shown");
+
+    // $("#my-button").click(function(){
+
+      // myParagraph.toggle();
+
+      // if(myParagraph.css("display") == 'none'){
+      //   myParagraph.show();
+      // } else {
+      //   myParagraph.hide();
+      // }
+
+      // myParagraph.toggleClass("hidden");
+
+      // if(myParagraph.hasClass("shown")){
+      //   myParagraph.removeClass("shown");
+      //   myParagraph.addClass("hidden");
+      // } else {
+      //   myParagraph.addClass("shown");
+      //   myParagraph.removeClass("hidden");
+      // }
+
+    // });
+
+    /* let textSize = $("#heading-1").css("font-size", "64px");
+    console.log("h1 text size is:" + textSize); */
+
+
+    // $("#name").val("default value");
+    // $("#my-form").submit(function (e) {
+    //   e.preventDefault();
+    //   let nameValue = $("#name").val();
+    //   let selectedGender = $("input[name=gender]:checked").val();
+    //   let newsletterChecked = $("#newsletter").is(":checked");
+    //   console.log(nameValue);
+    //   console.log(selectedGender);
+    //   console.log(newsletterChecked);
+    // });
 
     // let h1text = $("#heading-1").text("This is heading text.");
     // let h1text = $("#heading-1").html("This is <span style='color:red;'>new</span> heading text.");
-
     // let ulText = $("#my-list").text();
     // let ulText = $("#my-list").html();
     // console.log(ulText)
