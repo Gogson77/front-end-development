@@ -45,7 +45,9 @@
           <a class="text-decoration-none text-uppercase" href="#map-section">how to find us?</a>
         </div>
         <div class="d-md-none col-8 text-right">
-          <a id="menu-btn" href="#"><img id="menu-icon" src="img/menu.png" alt="menu icon"></a>
+          <a id="menu-btn" href="#">
+            <img id="menu-icon" src="img/menu.png" alt="menu icon">
+          </a>
         </div>
       </div>
     </div>
@@ -230,53 +232,72 @@
     </div>
   </footer>
 
-  <script src="js/jquery-3.4.1.slim.min.js"></script>
+  <script src="js/jquery-3.7.1.slim.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
 
   <script>
     window.addEventListener("load", function () {
 
-      let menuBtn = document.getElementById("menu-btn");
-      let mobileMenu = document.getElementById("mobile-menu");
-      let closeBtn = document.getElementById("close-btn");
+      // let menuBtn = document.getElementById("menu-btn");
+      // let mobileMenu = document.getElementById("mobile-menu");
+      // let closeBtn = document.getElementById("close-btn");
 
-      menuBtn.addEventListener("click", function () {
-        mobileMenu.style.display = "block";
+      // menuBtn.addEventListener("click", function () {
+      //   mobileMenu.style.display = "block";
+      // });
+
+      // closeBtn.addEventListener("click", function () {
+      //   mobileMenu.style.display = "none";
+      // });
+
+      // let mobileMenuItems = document.getElementsByClassName("mobile-menu-item");
+
+      // for (let i = 0; i < mobileMenuItems.length; i++) {
+      //   mobileMenuItems[i].addEventListener("click", function () {
+      //     mobileMenu.style.display = "none";
+      //   });
+      // }
+
+      $("#menu-btn, #close-btn").click(function () {
+        $("#mobile-menu").toggle();
       });
 
-      closeBtn.addEventListener("click", function () {
-        mobileMenu.style.display = "none";
-      });
-
-      let mobileMenuItems = document.getElementsByClassName("mobile-menu-item");
-
-      for (let i = 0; i < mobileMenuItems.length; i++) {
-        mobileMenuItems[i].addEventListener("click", function () {
-          mobileMenu.style.display = "none";
-        });
-      }
 
       //for header
 
-      let heroSection = document.getElementById("hero-section");
-      let heroSectionHeight = heroSection.clientHeight;
+      // let heroSection = document.getElementById("hero-section");
+      // let heroSectionHeight = heroSection.clientHeight;
 
-      let header = document.getElementById("header");
+      // let header = document.getElementById("header");
 
-      document.addEventListener("scroll", function () {
+      // document.addEventListener("scroll", function () {
 
-        if (document.documentElement.scrollTop > heroSectionHeight) {
-          if (!header.classList.contains("solid-header")) {
-            header.classList.add("solid-header");
+      //   if (document.documentElement.scrollTop > heroSectionHeight) {
+      //     if (!header.classList.contains("solid-header")) {
+      //       header.classList.add("solid-header");
+      //     }
+      //   } else {
+      //     if (header.classList.contains("solid-header")) {
+      //       header.classList.remove("solid-header");
+      //     }
+      //   }
+      // });
+
+      $(document).scroll(function () {
+
+        let header = $("#header");
+
+        if ($(this).scrollTop() > $("#hero-section").height()) {
+          if (!header.hasClass("solid-header")) {
+            header.addClass("solid-header");
           }
         } else {
-          if (header.classList.contains("solid-header")) {
-            header.classList.remove("solid-header");
+          if (header.hasClass("solid-header")) {
+            header.removeClass("solid-header");
           }
         }
       });
-
-
+      
     });
   </script>
 </body>
