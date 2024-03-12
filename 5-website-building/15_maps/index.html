@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/leaflet.css">
+  <style>
+    #map {
+      height: 580px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <div>
+    <button id="zoom">Set zoom to 5</button>
+    <button id="zoom-in">Zoom in</button>
+    <button id="zoom-out">Zoom out</button>
+    <button id="pan">Show Belgrade</button>
+    <button id="set-view">Show Tokyo with zoom level 13</button>
+    <button id="fly">Fly to Athens</button>
+  </div>
+
+  <script src="js/leaflet.js"></script>
+  <script>
+
+    // var myMap = L.map('map');
+    // myMap.setView([37.974, 23.72], 13);
+
+    var myMap = L.map('map', { center: [37.974, 23.72], zoom: 13 });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      {
+        attribution:
+          '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(myMap);
+
+    // myMap.locate({ setView: true, maxZoom: 16 });
+    // var marker = L.marker([37.974, 23.72]).addTo(myMap);
+
+    // var myIcon = L.icon({ iconUrl: 'css/images/marker-icon-2x.png' });
+    // var marker = L.marker([37.974, 23.72], { icon: myIcon } ).addTo(myMap);
+
+    // var latLngs = [
+    //   [38.00729, 23.73508],
+    //   [37.99992, 23.73328],
+    //   [38.00084, 23.72757],
+    //   [37.98917, 23.72671]
+    // ];
+    // var polyline = L.polyline(latLngs, { color: 'red' }).addTo(myMap);
+    // myMap.fitBounds(polyline.getBounds());
+
+    // var latlngs = [
+    //   [37.99528, 23.73347],
+    //   [37.99174, 23.73250],
+    //   [37.99105, 23.73689],
+    //   [37.99162, 23.73910],
+    //   [37.99274, 23.74071],
+    //   [37.99411, 23.74101],
+    //   [37.99573, 23.74035],
+    //   [37.99489, 23.73612]
+    // ];
+    // var polygon = L.polygon(latlngs, { color: 'red' }).addTo(myMap);
+    // myMap.fitBounds(polygon.getBounds());
+    // polygon.bindPopup("<b>Hello World!</b><br>I am polygon."); 
+
+    // var marker = L.marker([37.974, 23.72], { icon: myIcon } ).addTo(myMap);
+    // marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+
+    // var marker = L.marker([37.974, 23.72]).addTo(myMap);
+    // marker.bindTooltip("Hello. I am tooltip!");
+
+    var marker = L.marker([37.974, 23.72]).addTo(myMap);
+    marker.on("click", function () {
+      alert("You have clicked on marker.")
+    });
+
+    myMap.on("click", function (ev) {
+      alert("Coordinates of clicked point are: " + ev.latlng.lat + "," + ev.latlng.lng);
+    });
+
+    let buttons = document.getElementsByTagName("button");
+
+    for (let i = 0; i < buttons.length; i++) {
+
+      buttons[i].addEventListener("click", function () {
+
+        let id = this.id;
+
+        switch (id) {
+          case "zoom":
+            myMap.setZoom(5);
+            break;
+          case "zoom-in":
+            myMap.zoomIn(1);
+            break;
+          case "zoom-out":
+            myMap.zoomOut(1);
+            break;
+          case "pan":
+            myMap.panTo([44.82556, 20.45112]);
+            break;
+          case "set-view":
+            myMap.setView([35.69033, 139.77343], 13);
+            break;
+          case "fly":
+            myMap.flyTo([37.95232, 23.72346], 15);
+            break;  
+        }
+      });
+
+    }
+
+  </script>
+</body>
+
+</html>
