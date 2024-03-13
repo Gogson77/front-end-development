@@ -5,10 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coffee Shop Website Example</title>
+
   <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/29e72a736a.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/leaflet/leaflet.css">
+
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://kit.fontawesome.com/29e72a736a.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -227,7 +233,7 @@
   </section>
 
   <section id="map-section">
-
+    <div id="map"></div>
   </section>
 
   <footer>
@@ -247,7 +253,10 @@
   </footer>
 
   <script src="js/jquery-3.7.1.slim.min.js"></script>
+
   <script src="js/bootstrap.bundle.min.js"></script>
+
+  <script src="js/leaflet.js"></script>
 
   <script>
 
@@ -270,6 +279,26 @@
           }
         }
       });
+
+      var myMap = L.map('map', {
+        center: [40.741770, -73.983090],
+        zoom: 17
+      });
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(myMap);
+
+      var myIcon = L.icon({
+        iconUrl: 'img/map-icon.png'
+      });
+
+      var marker = L.marker([40.741770, -73.983090], {
+        icon: myIcon
+      }).addTo(myMap);
+
+      marker.bindPopup("We are here!");
+      marker.bindTooltip("Coffee Shop");
 
     });
 
