@@ -27,10 +27,6 @@ a:visited {
     color: white;
 }
 
-#menu-icon {
-    width: 32px;
-}
-
 .solid-header {
     position: fixed;
     background-color: #c69572;
@@ -72,14 +68,23 @@ a:visited {
     margin: 0 auto;
     display: block;
     width: 64px;
-    color: white;
+    /* color: white; */
     z-index: 3;
 }
+
 
 /************************************************ INTRO SECTION *********************************************/
 
 #intro-section {
     background: #eae7de;
+}
+
+.intro-icon {
+    width: 96px;
+}
+
+.intro-icon:hover {
+    transform: scale(1.1);
 }
 
 /************************************************ ABOUT SECTION *********************************************/
@@ -120,6 +125,46 @@ a:visited {
     background: #eae7de;
 }
 
+/************************************************ MOBILE MENU *********************************************/
+
+#menu-btn {
+    float: right;
+}
+
+#menu-icon {
+    font-size: 32px;
+}
+
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #312423ed;
+    z-index: 2;
+    display: none;
+}
+
+/* #mobile-menu  */
+
+a {
+    color: white;
+}
+
+/* #mobile-menu  */
+
+a:hover {
+    color: rgb(175, 171, 171);
+}
+
+#mobile-menu #close-btn {
+    position: absolute;
+    right: 29px;
+    top: 12px;
+    width: 36px;
+}
+
 /************************************************ CONTACT SECTION *********************************************/
 
 #contact-info-bg-1 {
@@ -141,8 +186,8 @@ footer {
     background: #312423;
 }
 
-footer a img {
-    width: 32px;
+footer a i {
+    font-size: 32px;
 }
 
 @media (max-width: 768px) {
@@ -156,30 +201,3 @@ footer a img {
     }
 }
 
-/************************************************ MOBILE MENU *********************************************/
-
-#mobile-menu {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #312423ed;
-    z-index: 2;
-    display: none;
-}
-
-#mobile-menu a {
-    color: white;
-}
-
-#mobile-menu a:hover {
-    color: rgb(175, 171, 171);
-}
-
-#mobile-menu #close-btn {
-    position: absolute;
-    right: 29px;
-    top: 12px;
-    width: 36px;
-}

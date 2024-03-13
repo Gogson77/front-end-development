@@ -5,17 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coffee Shop Website Example</title>
-
   <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/29e72a736a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
   <div id="mobile-menu">
-    <a id="close-btn" href="#"><img src="img/close-btn.png" alt="close"></a>
+    <a id="close-btn" href="#">
+      <span class="fa-stack fa-lg">
+        <i class="fa-regular fa-circle fa-stack-2x"></i>
+        <i class="fa-solid fa-xmark fa-stack-1x"></i>
+      </span>
+    </a>
     <div class="container">
       <div class="row vh-100 align-items-center">
         <div class="col-12 text-center">
@@ -31,8 +35,7 @@
                 href="#contact-info-section">contact</a>
             </div>
             <div>
-              <a class="mobile-menu-item text-decoration-none text-uppercase h3" href="#map-section">how to find
-                us?</a>
+              <a class="mobile-menu-item text-decoration-none text-uppercase h3" href="#map-section">how to find us?</a>
             </div>
           </nav>
         </div>
@@ -40,11 +43,11 @@
     </div>
   </div>
 
-  <header class="p-3" id="header">
+  <header id="header" class="p-3">
     <div class="container-fluid">
       <div class="row">
         <div class="col-4">
-          <img id="header-logo" src="img/header-logo.png" alt="coffe shop header logo">
+          <img id="header-logo" src="svg/header-logo.svg" alt="coffe shop header logo">
         </div>
         <div class="d-none d-md-block col-8 text-right">
           <a class="text-decoration-none text-uppercase" href="#intro-section">about</a>
@@ -52,9 +55,9 @@
           <a class="text-decoration-none text-uppercase" href="#contact-info-section">contact</a>
           <a class="text-decoration-none text-uppercase" href="#map-section">how to find us?</a>
         </div>
-        <div class="d-md-none col-8 text-right">
+        <div class="d-md-none col-8">
           <a id="menu-btn" href="#">
-            <img id="menu-icon" src="img/menu.png" alt="menu icon">
+            <i id="menu-icon" class="fas fa-bars"></i>
           </a>
         </div>
       </div>
@@ -65,7 +68,7 @@
     <div class="container-fluid">
       <div class="row vh-100 align-items-center pb-5">
         <div class="col-12 text-center">
-          <img id="hero-logo" src="img/logo.png" alt="coffee shop logo">
+          <img id="hero-logo" src="svg/logo.svg" alt="coffee shop logo">
           <h1 class="display-2 font-weight-bold">THE HOME OF COFFEE</h1>
           <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic numquam in repudiandae adipisci
             nemo ratione, ab aliquam suscipit nihil vitae?</p>
@@ -73,7 +76,10 @@
       </div>
     </div>
     <a id="arrow-down" href="#intro-section">
-      <img src="img/arrow-down.png" alt="see more">
+      <span class="fa-stack fa-lg">
+        <i class="fa-regular fa-circle fa-stack-2x"></i>
+        <i class="fa-solid fa-chevron-down fa-stack-1x"></i>
+      </span>
     </a>
   </section>
 
@@ -89,15 +95,15 @@
       </div>
       <div class="row py-5">
         <div class="col-sm-4 text-center">
-          <img class="img-fluid py-3" src="img/icon-1.png" alt="icon 1">
+          <img class="intro-icon img-fluid py-3" src="svg/icon-1.svg" alt="icon 1">
           <p class="h4 font-weight-bold">BEST BEANS</p>
         </div>
         <div class="col-sm-4 text-center">
-          <img class="img-fluid py-3" src="img/icon-2.png" alt="icon 2">
+          <img class="intro-icon img-fluid py-3" src="svg/icon-2.svg" alt="icon 2">
           <p class="h4 font-weight-bold">QUALITY MILK</p>
         </div>
         <div class="col-sm-4 text-center">
-          <img class="img-fluid py-3" src="img/icon-3.png" alt="icon 3">
+          <img class="intro-icon img-fluid py-3" src="svg/icon-3.svg" alt="icon 3">
           <p class="h4 font-weight-bold">PERFECT BLEND</p>
         </div>
       </div>
@@ -231,10 +237,10 @@
           Coffee Shop | © 2020 All rights reserved
         </div>
         <div class="col-md-5 text-right" id="social-icons">
-          <a href="#" class="mx-3"><img src="img/facebook-icon.png" alt="facebook icon"></a>
-          <a href="#" class=""><img src="img/instagram-icon.png" alt="instagram icon"></a>
-          <a href="#" class="mx-3"><img src="img/twitter-icon.png" alt="twitter icon"></a>
-          <a href="#"><img src="img/phone-icon.png" alt="phone icon"></a>
+          <a href="#" class="mx-3"> <i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#" class=""><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#" class="mx-3"><i class="fa-brands fa-square-twitter"></i></a>
+          <a href="#" class=""><i class="fa-solid fa-square-phone"></i></a>
         </div>
       </div>
     </div>
@@ -244,55 +250,14 @@
   <script src="js/bootstrap.bundle.min.js"></script>
 
   <script>
+
     window.addEventListener("load", function () {
-
-      // let menuBtn = document.getElementById("menu-btn");
-      // let mobileMenu = document.getElementById("mobile-menu");
-      // let closeBtn = document.getElementById("close-btn");
-
-      // menuBtn.addEventListener("click", function () {
-      //   mobileMenu.style.display = "block";
-      // });
-
-      // closeBtn.addEventListener("click", function () {
-      //   mobileMenu.style.display = "none";
-      // });
-
-      // let mobileMenuItems = document.getElementsByClassName("mobile-menu-item");
-
-      // for (let i = 0; i < mobileMenuItems.length; i++) {
-      //   mobileMenuItems[i].addEventListener("click", function () {
-      //     mobileMenu.style.display = "none";
-      //   });
-      // }
 
       $("#menu-btn, #close-btn").click(function () {
         $("#mobile-menu").toggle();
       });
 
-
-      //for header
-
-      // let heroSection = document.getElementById("hero-section");
-      // let heroSectionHeight = heroSection.clientHeight;
-
-      // let header = document.getElementById("header");
-
-      // document.addEventListener("scroll", function () {
-
-      //   if (document.documentElement.scrollTop > heroSectionHeight) {
-      //     if (!header.classList.contains("solid-header")) {
-      //       header.classList.add("solid-header");
-      //     }
-      //   } else {
-      //     if (header.classList.contains("solid-header")) {
-      //       header.classList.remove("solid-header");
-      //     }
-      //   }
-      // });
-
       $(document).scroll(function () {
-
         let header = $("#header");
 
         if ($(this).scrollTop() > $("#hero-section").height()) {
@@ -307,6 +272,47 @@
       });
 
     });
+
+    // let menuBtn = document.getElementById("menu-btn");
+    // let mobileMenu = document.getElementById("mobile-menu");
+    // let closeBtn = document.getElementById("close-btn");
+
+    // menuBtn.addEventListener("click", function () {
+    //   mobileMenu.style.display = "block";
+    // });
+
+    // closeBtn.addEventListener("click", function () {
+    //   mobileMenu.style.display = "none";
+    // });
+
+    // let mobileMenuItems = document.getElementsByClassName("mobile-menu-item");
+
+    // for (let i = 0; i < mobileMenuItems.length; i++) {
+    //   mobileMenuItems[i].addEventListener("click", function () {
+    //     mobileMenu.style.display = "none";
+    //   });
+    // }
+
+    //for header
+
+    // let heroSection = document.getElementById("hero-section");
+    // let heroSectionHeight = heroSection.clientHeight;
+
+    // let header = document.getElementById("header");
+
+    // document.addEventListener("scroll", function () {
+
+    //   if (document.documentElement.scrollTop > heroSectionHeight) {
+    //     if (!header.classList.contains("solid-header")) {
+    //       header.classList.add("solid-header");
+    //     }
+    //   } else {
+    //     if (header.classList.contains("solid-header")) {
+    //       header.classList.remove("solid-header");
+    //     }
+    //   }
+    // });
+
   </script>
 </body>
 
