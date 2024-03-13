@@ -1,60 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Assignment 2 - Website Building</title>
-        <style>
-            body {
-                box-sizing: border-box;
-                font-family: sans-serif;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2 - Website Building</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/29e72a736a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-            #login-container {
-                width: 460px;
-                margin: 0 auto;
-            }
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
 
-            form label,
-            form input {
-                width: 100%;
-                box-sizing: border-box;
-            }
+        #login-container {
+            width: 460px;
+            margin: 0 auto;
+        }
 
-            form input {
-                padding: 8px;
-            }
+        form label,
+        form input {
+            width: 100%;
+            box-sizing: border-box;
+        }
 
-            form label {
-                font-weight: bold;
-            }
+        form input {
+            padding: 8px;
+        }
 
-            form div {
-                margin: 16px 0px;
-            }
-        </style>
-    </head>
+        form label {
+            font-weight: bold;
+        }
 
-    <body>
+        form div {
+            margin: 16px 0px;
+        }
 
-        <div id="login-container">
+        .input-icon {
+            position: relative;
+        }
 
-            <form>
-                <div>
-                    <label for="username">Username:</label>
+        /* Google Material Icons */
+        .material-icons,
+        /* Font Awesome */
+        .fa-solid {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="login-container">
+        <form>
+            <div>
+                <label for="username">Username:</label>
+                <div class="input-icon">
                     <input id="username" type="text">
                 </div>
-
-                <div>
-                    <label for="password">Password:</label>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <div class="input-icon">
                     <input id="password" type="password">
                 </div>
+            </div>
+            <input type="submit" value="Login">
+        </form>
+        <br>
+        <div id="errors"></div>
+    </div>
 
-                <input type="submit" value="Login">
-            </form>
+    <script>
+        $(document).ready(function () {
+            $('form').submit(function (event) {
+                event.preventDefault();
 
-        </div>
+                var usernameValue = $('#username').val().trim();
+                var passwordValue = $('#password').val().trim();
 
-    </body>
+                $('#username, #password').css('border-color', '');
+                $('.material-icons').remove();
+                $('.fa-solid').remove();
+
+                var username = 'new_user';
+                var password = '123456789';
+                var valid = true;
+                var errors = [];
+
+                // Google Material Icons
+                var red = '<span class="material-icons" style="color: red;">close</span>'
+                var green = '<span class="material-icons" style="color: green;">done</span>';
+
+                // Font Awesome
+                // var red = '<i class="fa-solid fa-xmark" style="color: red;"></i>';
+                // var green = '<i class="fa-solid fa-check" style="color: green;"></i>';
+
+                if (usernameValue === '') {
+                    $('#username').css('border-color', 'red');
+                    $('#username').after(red);
+                    errors.push('Please enter username');
+                    valid = false;
+                } else if (usernameValue !== username) {
+                    $('#username').css('border-color', 'red');
+                    $('#username').after(red);
+                    errors.push('Please enter valid username');
+                    valid = false;
+                } else {
+                    $('#username').css('border-color', 'green');
+                    $('#username').after(green);
+                }
+
+                if (passwordValue === '') {
+                    $('#password').css('border-color', 'red');
+                    $('#password').after(red);
+                    errors.push('Please enter password');
+                    valid = false;
+                } else if (passwordValue !== password) {
+                    $('#password').css('border-color', 'red');
+                    $('#password').after(red);
+                    errors.push('Please enter valid password');
+                    valid = false;
+                } else {
+                    $('#password').css('border-color', 'green');
+                    $('#password').after(green);
+                }
+
+                if (!valid) {
+                    var errorMessage = errors.join('<br>');
+                    $('#errors').html(errorMessage);
+                } else {
+                    $('#errors').html('Successful login!');
+                }
+            });
+        });
+    </script>
+</body>
+
 </html>
