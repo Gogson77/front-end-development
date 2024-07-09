@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Objects</title>
+</head>
+<body>
+  <script>
+    var subaruLegacy = {
+      make: "Subaru",
+      model: "Legacy",
+      weight: 1560,
+      color: "black",
+      startEngine: function(){
+         return "Engine of " + this.make + " " + this.model + " started."
+      }
+    }
+
+/*     var subaruLegacy = new Object;
+    subaryLegacy.make = "Subaru";
+    subaryLegacy.model = "Legacy";
+    subaryLegacy.weight = 1560;
+    subaryLegacy.color = "black"; */
+
+/*     function Car(make, model, weight, color){
+      this.make = make;
+      this.model = model;
+      this.weight = weight;
+      this.color = color;
+
+      this.startEngine = function(){
+        return "Engine of " + this.make + " " + this.model + " started."
+      }
+    } */
+
+/*     var subaruLegacy = new Car("Subaru", "Legacy", 1560, "black")
+    var fordTaurus = new Car("Ford", "Taurus", 1876, "blue");
+    var porschePanamera = new Car("Porsche", "Panamera", 1963, "gray"); */
+
+    // console.log(subarulegacy.make + " " + subarulegacy.model);
+    console.log(subaruLegacy.startEngine());
+  </script>
+
+</body>
+</html>
