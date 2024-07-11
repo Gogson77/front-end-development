@@ -14,23 +14,82 @@
       this.model = model;
       this.weight = weight;
       this.color = color;
-
-      this.startEngine = function () {
-        return "Engine of " + this.make + " " + this.model + " started."
-      }
     }
 
+    Car.prototype.getName = function(){
+      return this.make + " " + this.model;
+    };
+
+    Car.prototype.getInfo = function(){
+      return "Make: " + this.make + "\n" +
+      "Model: " + this.model + "\n" +
+      "Weight: " + this.weight + "\n" +
+      "Color: " + this.color;
+      };
+
+    let car1 = new Car("Subaru", "Legacy", 1560, "black");
+
+    let car1Name = car1.getName();
+    let car1Info = car1.getInfo();
+
+    console.log(car1Name);
+    console.log(car1Info);
+
+    function Convertible (make, model, weight, color, roofType){
+      Car.call(this, make, model, weight, color);
+      this.roofType = roofType;
+    }
+
+    Convertible.prototype = Object.create(Car.prototype);
+    Convertible.prototype.constructor = Convertible;
+    
+    Convertible.prototype.getInfo = function(){
+      return Car.prototype.getInfo.call(this) + "\n" +
+      "Roof type: " + this.roofType;
+    };
+
+    let convertible1 = new Convertible("Honda", "S2000", 1274, "silver", "Vinyl, soft-top");
+
+    let convertible1Name = convertible1.getName();
+    let convertible1Info = convertible1.getInfo();
+
+    console.log(convertible1Name);
+    console.log(convertible1Info);
+
+    function Pickup(make, model, weight, color, cargoVolume){
+      Car.call(this, make, model, weight, color);
+      this.cargoVolume = cargoVolume;
+    }
+
+    Pickup.prototype = Object.create(Car.prototype);
+    Pickup.prototype.constructor = Pickup;
+
+    Pickup.prototype.getInfo = function(){
+      return Car.prototype.getInfo.call(this) + "\n" +
+      "Cargo volume: " + this.cargoVolume;
+    }
+
+    let pickup1 = new Pickup("Ford", "F-150", 1846, "silver", 63);
+
+    let pickup1Name = pickup1.getName();
+    let pickup1Info = pickup1.getInfo();
+
+    console.log(pickup1Name);
+    console.log(pickup1Info);
+
     // console.log(Car.prototype);
+    
+    // var subaruLegacy = new Car("Subaru", "Legacy", 1560, "black");
 
-    var subaruLegacy = new Car("Subaru", "Legacy", 1560, "black");
-
+    // console.log(Object.getPrototypeOf(subaruLegacy));
+     
     // console.log(subaruLegacy.__proto__ === Car.prototype);
     // console.log(Car.prototype.__proto__ === Object.prototype);
     // console.log(Function.prototype.__proto__ === Object.prototype);
     // console.log(Object.prototype.__proto__);
     // console.log(Car.__proto__ === Function.prototype);
     // console.log(Object.__proto__ === Function.prototype);
-    console.log(Function.__proto__ === Function.prototype);
+    // console.log(Function.__proto__ === Function.prototype);
 
 
 
