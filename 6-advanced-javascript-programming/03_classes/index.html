@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Classes</title>
+</head>
+<body>
+  <script>
+
+    class Car {
+
+      constructor (make, model, weight, color){
+        this.make = make;
+        this.model = model;
+        this._weight = weight;
+        this.color = color;
+      }
+
+      get name() {
+        return this.make + " " + this.model;
+      }
+
+      set weight(weight) {
+        if(!isNaN(weight)) {
+          this._weight = weight;
+        } else {
+          throw new TypeError('Value of weight must be a number');
+        }
+      }
+
+      get weight() {
+        return this._weight + "kg";
+      }
+
+/*       getName(){
+        return this.make + " " + this.model;
+      }
+ */
+      getInfo(){
+        return "Make: " + this.make + "\n" +
+        "Model: " + this.model + "\n" +
+        "Weight: " + this.weight + "\n" +
+        "Color: " + this.color;
+      }
+
+      static kwToHp(kw) {
+        return (kw * 1.34102).toFixed(2);
+      }
+
+    }
+
+    console.log(Car.kwToHp(250));
+
+    var car1 = new Car("Subaru", "Legacy", 1563, "black");
+    var car2 = new Car("Ford", "Taurus", 1876, "blue");
+    var car2 = new Car("Porsche", "Panamera", 1963, "grey");
+
+    car1.weight = 1900;
+
+    console.log(car1.weight);
+
+    class Convertible extends Car {
+
+      constructor(make, model, weight, color, roofType){
+        super(make, model, weight, color);
+        this.roofType = roofType;
+      }
+
+      getInfo(){
+        return super.getInfo() + "\n" +
+        "Roof type: " + this.roofType;
+      }
+
+    }
+
+    let convertible1 = new Convertible("Honda", "S2000", 1274, "silver", "Vinyl, soft top");
+
+    let convertible1Name = convertible1.name;
+    
+    console.log(convertible1Name);
+    console.log(convertible1.getInfo());
+
+    class Pickup extends Car {
+      constructor(make, model, weight, color, cargoVolume){
+        super(make, model, weight, color);
+        this.cargoVolume = cargoVolume;
+      }
+
+      getInfo(){
+        return super.getInfo() + "\n" + 
+        "Cargo volume: " + this.cargoVolume
+      }
+    }
+
+    let pickup1 = new Pickup("Ford", "F-150", 1846, "silver", 699);
+
+    console.log(pickup1.name);
+    console.log(pickup1.getInfo());
+
+    let pickup1Name = pickup1.name;
+    let pickup1Info = pickup1.getInfo();
+
+    console.log(pickup1Name);
+    console.log(pickup1Info);
+
+  </script>
+</body>
+</html>
