@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment - Šablon za kreiranje objekata studenata
+
+  </title>
+</head>
+
+<body>
+  <script>
+    class Student {
+      constructor(name, address, phone, course) {
+        this.name = name;
+        this.address = address;
+        this.phone = phone;
+        this.course = course;
+      }
+      getInfo() {
+        return "Name: " + this.name + "\n" +
+          "Address: " + this.address + "\n" +
+          "Phone" + this.phone + "\n" +
+          "Course" + this.course;
+      }
+    }
+
+    let student1 = new Student("John Benson", "High Park 36", "(507) 833-3567", "Geography");
+    let student2 = new Student("Gordan Kranjcic", "TSB38", "(033)461-450", "FE JS DEV");
+    let student3 = new Student("Irma Irmic", "ABCD31", "(033)1234-567", "PIM FRN MA");
+
+    let student1Info = student1.getInfo();
+    let student2Info = student2.getInfo();
+    let student3Info = student3.getInfo();
+
+    console.log(student1Info);
+    console.log(student2Info);
+    console.log(student3Info);
+</script>
+</body>
+
+</html>
