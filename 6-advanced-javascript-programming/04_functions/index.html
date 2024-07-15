@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Functions</title>
+</head>
+
+<body>
+  <script>
+    /*     function calculateRectArea(a, b) {
+          return a * b;
+        }
+        var result = calculateRectArea(10, 5);
+        console.log(result); */
+
+    /*     function sayHello(name) {
+          console.log("Hello " + name);
+        }
+        sayHello("Ben"); */
+
+    /*     function sayHelloWorld(){
+          console.log("Hello World");
+        }
+        sayHelloWorld(); */
+
+    /*     var calculateRectArea = new Function("a", "b", "return a*b");
+        var result = calculateRectArea(5,10);
+        console.log(result); */
+
+    /*     function sum() {
+          let returnValue = 0;
+          for(let i = 0; i < arguments.length; i++){
+            returnValue += arguments[i];
+          }
+          return returnValue;
+        }
+        let sumResult = sum(10,15,15);
+        console.log(sumResult); */
+
+    /*     function countdown(start) {
+          for (let i = start; i >= 0; i--) {
+            console.log(i)
+          }
+        }
+        countdown(8); */
+
+    /*     function countdown(start) {
+          if (start < 0) {
+            return;
+          }
+          console.log(start);
+          countdown(--start);
+        }
+        countdown(8); */
+
+    function sort(array) {
+      let temp;
+      let sorted = true;
+
+      for (let i = 0; i < array.length - 1; i++) {
+
+        if (array[i] > array[i + 1]) {
+
+          temp = array[i];
+          array[i] = array[i + 1];
+          array[i + 1] = temp;
+          sorted = false;
+
+        }
+      }
+
+      if(!sorted){
+        sort(array);
+      }
+
+      return array;
+    }
+
+    let numArray = [18, 4, 8, 34, 12, 0, 3];
+
+    numArray = sort(numArray);
+
+    console.log(numArray);
+
+  </script>
+</body>
+
+</html>
