@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inner functions and closures</title>
+</head>
+
+<body>
+  <script>
+    // 'use strict'
+
+/*     function myFunction() {
+      x = 4;
+    }
+    myFunction();
+    console.log(x); */
+    
+    // samo pozivajuce funkcije
+/*     (function(){
+      console.log("Hello from self invoking function")
+    })();     */
+
+/*     (function(){
+      var number = 5;
+      console.log(number);
+    })();
+
+    var number = 10;
+    console.log(number); */
+
+    function substractSquares(a, b) {
+      function square(x){
+        return x * x;
+      }
+        return square(a) - square(b);
+    }
+    console.log(substractSquares(6, 3));
+
+  </script>
+</body>
+
+</html>

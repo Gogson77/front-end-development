@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Anonymous and Arrow Functions</title>
+</head>
+
+<body>
+  <script>
+
+    /*     var a = function(x){
+          return x*x;
+        }
+        console.log(a(5)); */
+
+    // let names = ["John", "Ben", "Ana", "David"];
+
+    /*     function sayHello(name){
+      console.log("Hello " + name);
+    } */
+
+    /*     function sayHellosToMany(names, sayHelloToOne) {
+          for (let i = 0; i < names.length; i++) {
+            sayHelloToOne(names[i]);
+          }
+        } */
+
+    // sayHellosToMany(names, name => { console.log("Hello " + name) });
+
+    /*     var a = (x, y) => { x++; return x * y; };
+        console.log(a(5, 10)); */
+
+    /*     function Student() {
+
+          this.courses = []; 
+    
+          this.addCourses = function(courses) {
+
+            var self = this;
+          
+            courses.forEach(function(value, index){
+          
+            self.courses[index] = value;
+          
+            });
+          }
+        } */
+
+    function Student() {
+
+      this.courses = [];
+      
+      this.addCourses = function (courses) {
+        
+        courses.forEach((value, index) =>{
+          this.courses[index] = value;
+        });
+      }
+    }
+
+    var s = new Student();
+    s.addCourses(["Math", "Geo", "History"]);
+
+    console.log(s.courses);
+
+  </script>
+</body>
+
+</html>
