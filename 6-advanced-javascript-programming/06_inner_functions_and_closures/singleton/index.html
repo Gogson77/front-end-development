@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singleton in JavaScript</title>
+</head>
+
+<body>
+
+  <button id="show-status-button">Get Status</button>
+
+  <script>
+    var User = (function () {
+
+      var instance;
+
+      function createInstance() {
+
+        var numberOfClicks = 0;
+        var dateTimeStart;
+        var dateTimeEnd;
+
+        return {
+
+          incrementNumberOfClicks: function () {
+            numberOfClicks++;
+          },
+
+          startSession: function () {
+            dateTimeStart = new Date();
+          },
+
+          getNumberOfClicks: function () {
+            return numberOfClicks;
+          },
+
+          getDateTimeStart: function () {
+            if (dateTimeStart !== undefined) {
+              return dateTimeStart.toDateString();
+            }
+            return "-";
+          },
+
+          getDateTimeEnd: function () {
+            if (dateTimeEnd !== undefined) {
+              return dateTimeEnd.toDateString();
+            }
+            return "-";
+          }
+
+        };
+      };
+
+      return {
+        getInstance: function () {
+          if (!instance) {
+            instance = createInstance();
+          }
+          return instance;
+        }
+      }
+
+    })();
+
+    var user = User.getInstance();
+    user.startSession();
+
+    document.addEventListener("click", function () {
+      user.incrementNumberOfClicks();
+    });
+
+    var statusButton = document.getElementById("show-status-button");
+
+    statusButton.addEventListener("click", function () {
+
+      alert("Session start: " + user.getDateTimeStart() + "\n" +
+        "Session end: " + user.getDateTimeEnd() + "\n" +
+        "Number of clicks: " + user.getNumberOfClicks());
+
+    });
+
+    window.onbeforeunload = function () {
+      user.endSession();
+      //save state if needed
+    }
+
+  </script>
+</body>
+
+</html>

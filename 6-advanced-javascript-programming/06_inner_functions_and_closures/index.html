@@ -11,32 +11,76 @@
   <script>
     // 'use strict'
 
-/*     function myFunction() {
-      x = 4;
-    }
-    myFunction();
-    console.log(x); */
-    
+    /*     function myFunction() {
+          x = 4;
+        }
+        myFunction();
+        console.log(x); */
+
     // samo pozivajuce funkcije
-/*     (function(){
-      console.log("Hello from self invoking function")
-    })();     */
+    /*     (function(){
+          console.log("Hello from self invoking function")
+        })();     */
 
-/*     (function(){
-      var number = 5;
-      console.log(number);
-    })();
+    /*     (function(){
+          var number = 5;
+          console.log(number);
+        })();
+    
+        var number = 10;
+        console.log(number); */
 
-    var number = 10;
-    console.log(number); */
+    /*     function substractSquares(a, b) {
+          function square(x){
+            return x * x;
+          }
+            return square(a) - square(b);
+        }
+        console.log(substractSquares(6, 3)); */
 
-    function substractSquares(a, b) {
-      function square(x){
-        return x * x;
-      }
-        return square(a) - square(b);
-    }
-    console.log(substractSquares(6, 3));
+    /*     function Coupon(firstName, lastName) {
+          var code = (Math.random() * 10e16).toString();
+          this.firstName = firstName;
+          this.lastName = lastName;
+          this.getCode = function () { return code };
+        }
+        let coupon1 = new Coupon("John", "Lord");
+        console.log(coupon1.getCode()); */
+
+    //closure
+    /*     let sayHello = (function () {
+          const greeting = "Hello ";
+          return {
+            to: function (name) { 
+              return greeting + name;
+            }
+          }
+        })();
+        let greeting = sayHello.to("John");
+        console.log(greeting); */
+
+    //higher order function 
+    /*     function sum(a) {
+          return function (b) {
+            return a + b;
+          }
+        }
+        let result = sum(5)(3);
+        console.log(result); */
+
+    //singleton
+
+
+    /*     function generateCoupon(firstName, lastName) {
+          var code = (Math.random() * 10e16).toString();
+          // send code, firstName and lastName over the network
+          return "Hello " + firstName + " " + lastName + ". Your coupon has been generated.";
+        } */
+
+    /*     var response = generateCoupon("John", "Lord");
+        console.log(response);
+        console.log(code); */
+
 
   </script>
 </body>
