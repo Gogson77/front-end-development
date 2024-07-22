@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timing and Callback functions</title>
+</head>
+
+<body>
+
+  <h1 id="heading">setInterval1</h1>
+
+  <!-- <button id="my-button">Click me</button> -->
+
+  <script>
+
+    let heading = document.getElementById("heading");
+
+    function changeColor(elem) {
+      elem.style.color = elem.style.color == 'red' ? 'blue' : 'red';
+    }
+
+    let interval1 = setInterval(changeColor, 500, heading);
+
+    setTimeout(function (intervalId) { 
+      //sinonim clearInterval() ili clearTimeout()
+      // clearInterval(intervalId);
+      clearTimeout(intervalId);
+
+    }, 5000, interval1);
+
+
+
+    /*     console.log("Statement 1");
+    var timeout1 = setTimeout(function(){
+      console.log("Statement 2");
+    }, 2000);
+    var timeout2 = setTimeout(function(timeout){
+      clearTimeout(timeout);
+      console.log("Timeout 1 is cleared...");
+    }, 1000, timeout1);
+    console.log("Statement 3"); */
+
+    // clearTimeout(timeout1);
+
+
+    /*     var myButton = document.getElementById("my-button");
+        myButton.addEventListener("click", function(){
+          alert("Hello from modal window.");
+          console.log("Hello from statement after alert() method.");
+        });
+        console.log("Hello from some code after addEventListener() method."); */
+
+  </script>
+</body>
+
+</html>
