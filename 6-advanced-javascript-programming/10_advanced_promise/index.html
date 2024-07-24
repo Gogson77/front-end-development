@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Promise</title>
+</head>
+
+<body>
+  <script>
+
+    /*     new Promise(function (res, rej) {
+          res(4);
+        }).then( (value) => {
+          console.log(value);
+          let res = value;
+          setTimeout(()=> res = value * value, 2000);
+          return res;
+        }).then( (value) => {
+          console.log(value);
+        }); */
+
+    new Promise(function (res, rej) {
+      res(4);
+    }).then((value) => {
+
+      console.log(value);
+
+      throw new Error("Error in callback.");
+
+      return new Promise(function (res, rej) {
+        setTimeout(() => res(value * value), 2000);
+      });
+
+    }).then((value) => {
+      console.log(value);
+    }).catch(function(error){
+      console.log(error)
+    });
+
+
+    /*     function delay(time){
+          return new Promise(function(resolve, reject){
+            setTimeout(resolve, time);
+          });
+        }
+    
+        delay(4000).then(function(){
+          console.log("4 seconds passed...");
+          return delay(2000);
+        }).then(function(){
+          console.log("2 seconds passed...");
+          return delay(3000);
+        }).then(function(){
+          console.log("3 seconds passed...");
+        }) */
+
+    /* let promise = new Promise(function (resolve, reject) {
+      setTimeout(() => reject("Unknown error"), 3000);
+    });
+    promise.then(
+      function (result) {console.log(result); }, 
+      function (error) { console.log(error); }); */
+
+    /* let promise = new Promise(function (resolve, reject) {
+      throw new Error("Unknown error");
+    });
+    promise.catch(function (error) { console.log(error); }); */
+
+  </script>
+</body>
+
+</html>

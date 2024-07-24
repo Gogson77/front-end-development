@@ -94,7 +94,7 @@
     let promise = new Promise(function(resolve, reject){
       setTimeout(()=> resolve("Loaded!"), 3000);
     });
-    promise.then(function(result){
+     promise.then(function(result){
       let resultBox = document.getElementById("result-box");
       resultBox.innerHTML = result;
     }).finally(function(){
