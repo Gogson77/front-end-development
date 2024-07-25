@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment - Čitanje podataka o studentima</title>
+</head>
+
+<body>
+  <textarea id="my-text-area" cols="30" rows="25"></textarea>
+  <div></div>
+  <button id="fetch-data-btn">Fetch Students Data</button>
+
+  <script>
+    const button = document.getElementById("fetch-data-btn");
+    const textArea = document.getElementById("my-text-area");
+    
+    button.addEventListener("click", function () {
+      textArea.innerHTML = '';
+      fetchStudentData();
+    });
+
+    // Student class definition
+    class Student {
+      constructor(name, address, phone, course) {
+        this.name = name;
+        this.address = address;
+        this.phone = phone;
+        this.course = course;
+      }
+    }
+
+    // Function to fetch and process student data
+    async function fetchStudentData() {
+      try {
+        const response = await fetch('https://v-dresevic.github.io/Advanced-JavaScript-Programming/data/students.txt');
+        if (response.status !== 200) { throw new Error("Error while reading file.") }
+        const data = await response.text();
+        const students = parseStudentData(data);
+        displayStudents(students);
+      } catch (error) {
+        console.error('Error fetching student data:', error);
+        textArea.innerHTML = "Fetch problem: " + error.message;
+      }
+    }
+
+    // Function to parse student data
+    function parseStudentData(data) {
+      const lines = data.split('\n').filter(line => line.trim() !== '');
+      const students = [];
+
+      for (let i = 0; i < lines.length; i += 4) {
+        const student = new Student(lines[i], lines[i + 1], lines[i + 2], lines[i + 3]);
+        students.push(student);
+      }
+
+      return students;
+    }
+
+    // Function to display students on the webpage
+    function displayStudents(students) {
+
+      students.forEach(student => {
+        textArea.innerHTML += 'Name: ' + student.name;
+        textArea.innerHTML += 'Address: ' + student.address;
+        textArea.innerHTML += 'Phone: ' + student.phone;
+        textArea.innerHTML += 'Course: ' + student.course;
+        textArea.innerHTML += '\n';
+      });
+
+    }
+
+  </script>
+</body>
+
+</html>
