@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript async/await</title>
+</head>
+
+<body>
+  <script>
+
+    /*     async function sayHello() {
+          return "Hello World";
+        }
+        var promise = sayHello();
+        promise.then(function(result){
+          console.log(result);
+        }); */
+
+/*         function getName() {
+          return new Promise(function (resolve, reject) {
+            setTimeout(() => resolve("Ben"), 3000);
+          });
+        }
+        async function sayHello() {
+          let name;
+          name = await getName();
+          return "Hello " + name;
+        }
+        sayHello().then(function (result) {
+          console.log(result);
+        });
+        console.log("Some other code."); */
+
+/*     async function sayHello() {
+      throw new Error("Unknown error");
+      return "Hello World.";
+    }; */
+    /*     sayHello().then(
+          function () { 
+    
+          },
+          function (error) {
+            console.log(error);
+          }); */
+/*     sayHello().catch(function (error) {
+      console.log(error);
+    }
+    ); */
+
+    function getName() {
+          return new Promise(function (resolve, reject) {
+            setTimeout(() => reject("Unknown error"), 3000);
+          });
+        }
+        async function sayHello() {
+          let name;
+          try{
+            name = await getName();
+
+          }
+          catch(e){
+            return e;
+          }
+          return "Hello " + name;
+        }
+        sayHello().then(function (result) {
+          console.log(result);
+        });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch example</title>
+
+  <style>
+    #loader {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      display: none;
+    }
+
+    #loader:after {
+      content: " ";
+      display: block;
+      width: 18px;
+      height: 18px;
+      margin: 2px;
+      border-radius: 50%;
+      border: 2px solid #241f1f;
+      border-color: #241f1f transparent #241f1f transparent;
+      animation: lds-dual-ring 1.2s linear infinite;
+    }
+
+    @keyframes lds-dual-ring {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    #my-text-area {
+      display: block;
+      width: 100%;
+      margin-top: 16px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <button id="get-text-btn">Get Data</button>
+  <div id="loader"></div>
+  <textarea id="my-text-area" rows="30"></textarea>
+
+  <script>
+
+    let button = document.getElementById("get-text-btn");
+    let textArea = document.getElementById("my-text-area");
+    let loader = document.getElementById("loader");
+
+    button.addEventListener("click", function () {
+
+      getData();
+
+    });
+
+    
+    async function getData() {
+
+      loader.style.display = "inline-block";
+
+      try {
+        let response = await fetch('https://v-dresevic.github.io/Advanced-JavaScript-Programming/data/text.txt');
+
+        if (response.status !== 200) {
+          throw new Error("Error while reading file.")
+        }
+
+        let text = await response.text();
+        textArea.innerHTML = text;
+
+      } catch (err) {
+        textArea.innerHTML = "Fetch problem: " + err.message;
+      } finally {
+        loader.style.display = "none";
+      }
+
+    };
+
+  </script>
+</body>
+
+</html>
