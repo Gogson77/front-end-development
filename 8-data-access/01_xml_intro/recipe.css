@@ -1,0 +1,38 @@
+root {
+  font-family: sans-serif;
+}
+
+recipe {
+  display: block;
+  margin: 2em 1em;
+  border: 4px solid #93AEC9;
+  padding: 0 1em 1em;
+  background-color: white;
+}
+
+recipe::before {
+  display: block;
+  width: 8em;
+  font-weight: bold;
+  font-size: 200%;
+  content: "Cooking Recipes";
+  margin: -.75em 0px .25em -.25em;
+  padding: .1em .25em;
+  background-color: #93AEC9;
+  color: white;
+}
+
+title {
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+ingredients {
+  display: block;
+  padding-left: 36px;
+}
+
+ingredient {
+  display: list-item;
+}

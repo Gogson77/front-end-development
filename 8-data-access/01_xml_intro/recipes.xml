@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="recipe.css" ?>
+
+<root xmlns="http://www.my-site.com/cooking"
+  xmlns:b="http://www.my-site.com/beauty">
+  <recipe>
+    <title>Grilled Cheese Sandwich</title>
+    <ingredients>
+      <ingredient qty="2">bread slice</ingredient>
+      <ingredient>cheese slice</ingredient>
+      <ingredient qty="2">margarine pat</ingredient>
+    </ingredients>
+  </recipe>
+
+</root>
