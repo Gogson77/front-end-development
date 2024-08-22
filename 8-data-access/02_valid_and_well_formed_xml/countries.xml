@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE root SYSTEM "country.dtd">
+<root>
+  <country countryCode="sr">
+    <name>Serbia</name>
+    <capital>Belgrade</capital>
+    <description>Serbia is...</description>
+  </country>  
+  <country countryCode="fr">
+    <name>France</name>
+    <capital>Paris</capital>
+    <description>France is...</description>
+  </country>
+</root>
