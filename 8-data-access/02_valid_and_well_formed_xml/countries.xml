@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE root SYSTEM "country.dtd">
-<root>
+<!-- <!DOCTYPE root SYSTEM "country.dtd"> -->
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="country.xsd">
   <country countryCode="sr">
     <name>Serbia</name>
     <capital>Belgrade</capital>
