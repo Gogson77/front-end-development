@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>XML Serializer</title>
+    </head>
+ 
+    <body>
+ 
+        <div id="xml">
+        </div>
+ 
+        <script>
+ 
+            //create XMLDocument object with root element
+            var xmlDocument = document.implementation.createDocument(null, "root");
+ 
+            //create recipe
+            var recipeElement = xmlDocument.createElement("recipe");
+ 
+            //create title element
+            var titleElement = xmlDocument.createElement("title");
+            var titleElementText = xmlDocument.createTextNode("Grilled Cheese Sandwich");
+            titleElement.appendChild(titleElementText);
+ 
+            //add title to recipe
+            recipeElement.appendChild(titleElement);
+ 
+ 
+            //create ingredients
+            var ingredientsElement = xmlDocument.createElement("ingredients");
+ 
+ 
+            //create first ingredient element
+            var ingredient1Element = xmlDocument.createElement("ingredient");
+            var ingredient1ElementText = xmlDocument.createTextNode("bread slice");
+            ingredient1Element.appendChild(ingredient1ElementText);
+            ingredient1Element.setAttribute("qty", "2");
+ 
+ 
+            //create second ingredient element
+            var ingredient2Element = xmlDocument.createElement("ingredient");
+            var ingredient2ElementText = xmlDocument.createTextNode("cheese slice");
+            ingredient2Element.appendChild(ingredient2ElementText);
+ 
+ 
+            //create third ingredient element
+            var ingredient3Element = xmlDocument.createElement("ingredient");
+            var ingredient3ElementText = xmlDocument.createTextNode("margarine pat");
+            ingredient3Element.appendChild(ingredient3ElementText);
+            ingredient3Element.setAttribute("qty", "2");
+ 
+            //add ingredient(s) to ingredients
+            ingredientsElement.appendChild(ingredient1Element);
+            ingredientsElement.appendChild(ingredient2Element);
+            ingredientsElement.appendChild(ingredient3Element);
+ 
+            //add ingredients to recipe
+            recipeElement.appendChild(ingredientsElement);
+ 
+            //add recipe to root
+            xmlDocument.documentElement.appendChild(recipeElement);
+ 
+            //create XMLSerializer to convert XML DOM to string
+            var xmlSerializer = new XMLSerializer();
+            var xmlString = xmlSerializer.serializeToString(xmlDocument);
+ 
+            //show xml in div element on html page
+            var xmlContainer = document.getElementById("xml");
+            xmlContainer.appendChild(document.createTextNode(xmlString));
+ 
+        </script>
+    </body>
+</html>

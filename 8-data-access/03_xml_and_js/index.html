@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XML and Javascript</title>
+</head>
+<body>
+  <script>
+
+    var xmlDocument = document.implementation.createDocument(null, "root");
+
+    var ingredient1Element = xmlDocument.createElement("ingredient");
+    var ingredient1ElementText = xmlDocument.createTextNode("bread slice");
+    ingredient1Element.appendChild(ingredient1ElementText);
+
+    xmlDocument.documentElement.appendChild(ingredient1Element);
+
+    var xmlSerializer = new XMLSerializer();
+    var xmlString = xmlSerializer.serializeToString(xmlDocument);
+
+
+
+/*     var myXmlString = '<root><message>Hello World!</message></root>';
+    var domParser = new DOMParser();
+    var xmlDom = domParser.parseFromString(myXmlString, "text/xml");
+
+      if(xmlDom.getElementsByTagName("parsererror").length !== 0){
+        console.log("There is an error while parsing XML document")
+      } else {
+        var messageElement = xmlDom.getElementsByTagName("message")[0];
+        var messageText = messageElement.childNodes[0];
+        console.log(messageText.nodeValue)
+      } */
+
+      
+  </script>  
+</body>
+</html>
