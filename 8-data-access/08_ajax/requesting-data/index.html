@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajax - Requesting data</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "countries.json");
+    xhr.responseType = "json";
+    xhr.send();
+
+    xhr.onload = function () {
+      let countries = xhr.response;
+      for (let i = 0; i < countries.length; i++) {
+        
+        document.body.innerHTML += '<h2>' + countries[i].name + '</h2>';
+        document.body.innerHTML += '<p>Country code: ' +  countries[i].countryCode + '</p>';
+        document.body.innerHTML += '<p>Capital: ' +  countries[i].capital + '</p>';
+        document.body.innerHTML += '<p>Description: ' +  countries[i].description + '</p>';
+        
+      }
+      // console.log('Response loaded: ' + xhr.response);
+    };
+    xhr.onerror = function () {
+      console.log('Network error');
+    };
+    xhr.onprogress = function (event) {
+      console.log('Received ' + event.loaded + ' of ' + event.progress);
+    };
+
+  </script>
+</body>
+
+</html>
