@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Serializer</title>
+</head>
+
+<body>
+  <script>
+
+    var person = {};
+    person.id = 34;
+    person.firstName = "Ben";
+    person.lastName = "Lord";
+    person.address = {};
+    person.address.street = "Bos En Lommerweg 65";
+    person.address.zipCode = "1080 AG";
+    person.address.city = "Amsterdam";
+    person.adult = true;
+
+    // var json = JSON.stringify(person, null, 3);
+    // var json = JSON.stringify(person, null, 6);
+    var json = JSON.stringify(person, null, "\t");
+    console.log(json);
+
+  </script>
+</body>
+
+</html>

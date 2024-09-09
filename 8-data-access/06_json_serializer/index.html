@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Serializer</title>
+</head>
+
+<body>
+  <script>
+
+    var person = {};
+    person.id = 34;
+    person.firstName = "Ben";
+    person.lastName = "Lord";
+    person.address = {};
+    person.address.street = "Bos En Lommerweg 65";
+    person.address.zipCode = "1080 AG";
+    person.address.city = "Amsterdam";
+
+    person.address.toJSON = function(name){
+      return {
+        street: this.street,
+        zip_code: this.zipCode
+      }
+    }
+    
+    person.adult = true;
+
+    person.showInfo = function () {
+      return firstName + " " + lastName;
+    }
+
+    person.toJSON = function (name) {
+      return {
+        first_name: this.firstName,
+        last_name: this.lastName,
+        address: this.address
+      }
+    }
+
+    /*   function replacer(key, value) {
+        if(key === 'id'){
+          return undefined;
+        } else if (key === 'adult'){
+          return (value === true) ? "yes" : "no";
+        }
+        return value;
+      } */
+
+    // var replacer = ["firstName", "lastName", "address", "street", "zipCode", "city", "adult"];
+    var replacer = ["first_name", "last_name", "address"];
+
+    // var json = JSON.stringify(person);
+    var json = JSON.stringify(person, replacer);
+
+    console.log(json);
+
+  </script>
+</body>
+
+</html>
