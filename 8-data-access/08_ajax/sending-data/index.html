@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajax - Sendind Data</title>
+</head>
+
+<body>
+  <script>
+    var user = {
+      name: "Ben",
+      surname: "Torrance"
+    }
+
+    let json = JSON.stringify(user);
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", 'https://examples.wizardbit.com/ajax/users.php');
+    xhr.setRequestHeader("Content-type", "application/json; charset=utf-8")
+    xhr.send(json);
+
+    xhr.onload = () => { document.write(xhr.response); }
+
+  </script>
+</body>
+
+</html>
