@@ -39,7 +39,7 @@
 
       let formData = new FormData(document.forms.contact);
 
-      formData.append("contact-code", Math.random().toString(36).substring(7));
+      // formData.append("contact-code", Math.random().toString(36).substring(7));
 
       let xhr = new XMLHttpRequest();
       xhr.open("POST", "https://examples.wizardbit.com/ajax/contact.php");
