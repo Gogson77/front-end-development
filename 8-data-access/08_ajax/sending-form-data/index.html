@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ajax . FormData</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    form input[ type="text"],
+    form textarea {
+      display: block;
+      margin-bottom: 8px;
+      width: 360 px;
+    }
+  </style>
 </head>
+
 <body>
+
+  <form name="contact">
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name">
+    <label for="message">Message: </label>
+    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+    <input type="submit" value="Submit">
+  </form>
+
+  <div id="response"></div>
+
   <script>
 
-    
+    document.forms.contact.addEventListener("submit", function (e) {
+
+      e.preventDefault();
+
+      let formData = new FormData(document.forms.contact);
+
+      formData.append("contact-code", Math.random().toString(36).substring(7));
+
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", "https://examples.wizardbit.com/ajax/contact.php");
+      xhr.send(formData);
+
+      xhr.onload = () => {
+        var responseDiv = document.getElementById("response");
+        responseDiv.innerHTML = xhr.response;
+      };
+
+    });
 
   </script>
 </body>
+
 </html>
