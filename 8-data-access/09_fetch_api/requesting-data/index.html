@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch API - Requesting data</title>
+</head>
+
+<body>
+  <script>
+
+    fetch("countries.json").then(function (response) {
+
+      if(!response.ok){
+        throw Error("Error while reading file.");
+      }
+
+      return response.json();
+
+    }).then(function (countries) {
+
+      for (let i = 0; i < countries.length; i++) {
+
+        document.body.innerHTML += '<h2>' + countries[i].name + '</h2>';
+        document.body.innerHTML += '<p>Country code: ' + countries[i].countryCode + '</p>';
+        document.body.innerHTML += '<p>Capital: ' + countries[i].capital + '</p>';
+        document.body.innerHTML += '<p>Description: ' + countries[i].description + '</p>';
+
+      }
+
+    }).catch(function(err){
+
+      console.log('Fetch problem: ' + err.message);
+
+    });
+
+  </script>
+</body>
+
+</html>

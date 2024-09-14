@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookies</title>
+</head>
+
+<body>
+  <script>
+    document.cookie = "lang=en; max-age=3600";
+    document.cookie = "lang=sr; max-age=7200";
+    // document.cookie = "lang=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    console.log(document.cookie);
+
+    function cookieExists(name) {
+      if (document.cookie.split(';').some((item) =>
+        item.trim().startsWith(name + '='))) {
+        return true;
+      }
+      return false;
+    }
+  </script>
+</body>
+
+</html>

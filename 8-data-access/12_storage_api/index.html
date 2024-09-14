@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    sessionStorage.setItem('myDog', 'Lisa');
+    localStorage.setItem('myDog', 'Lisa');
+
+    var value = localStorage.getItem('myDog');
+    console.log(value);
+
+    var value2 = sessionStorage.getItem('myDog');
+    console.log(value2);
+
+    localStorage.myDog = "Lisa";
+
+    var value = localStorage.myDog;
+    console.log(value);
+
+    localStorage.setItem('myDog', 'Ticky');
+
+    localStorage.removeItem('myDog');
+    sessionStorage.removeItem('myDog');
+
+    localStorage.clear();
+    sessionStorage.clear();
+
+    let key = localStorage.key(0);
+
+    localStorage.setItem('item1', 1);
+    localStorage.setItem('item2', 2);
+    localStorage.setItem('item3', 3);
+    localStorage.setItem('item4', 4);
+
+    for (let i = 0; i < localStorage.length; i++) {
+      let key = localStorage.key(i);
+      console.log(key + ": " + localStorage.getItem(key));
+    }
+
+    for (let key of Object.keys(localStorage)) {
+      console.log(key + ": " + localStorage.getItem(key));
+    }
+
+    window.onstorage = function (event) {
+
+      if (event.key === null) {
+        console.log("Whole storage is cleared!");
+        return;
+      }
+
+      if (event.oldValue === null) {
+        console.log("New value added to storage: " + event.key + " " + event.newValue);
+        return;
+      }
+
+      if (event.newValue === null) {
+        console.log("Value removed from storage: " + event.key + " " + event.oldValue);
+        return;
+      }
+
+      console.log("Value with the key: " + event.key + " updated. Old value: " + event.oldValue + " New value: " + event.newValue);
+
+    }
+
+  </script>
+</body>
+
+</html>

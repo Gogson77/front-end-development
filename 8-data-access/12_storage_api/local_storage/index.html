@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storage API</title>
+</head>
+
+<body>
+  <button id="add-update">Add/Update code</button>
+  <button id="remove">Remove code</button>
+  <button id="clear">Clear All</button>
+
+  <script>
+    var addUpdateButton = document.getElementById("add-update");
+    var removeButton = document.getElementById("remove");
+    var clearButton = document.getElementById("clear");
+
+    addUpdateButton.onclick = function () {
+      localStorage.setItem('code', Math.random().toString(36).substring(7));
+    }
+
+    removeButton.onclick = function () {
+      localStorage.removeItem('code');
+    }
+
+    clearButton.onclick = function () {
+      localStorage.clear();
+    }
+
+    window.onstorage = function (event) {
+      if (event.key === null) {
+        console.log("Whole storage is cleared!");
+        return;
+      }
+
+      if (event.oldValue === null) {
+        console.log("New value added to storage: " + event.key + " " + event.newValue);
+        return;
+      }
+
+      if (event.newValue === null) {
+        console.log("Value removed from storage: " + event.key + " " + event.oldValue);
+        return;
+      }
+
+      console.log("Value with key: " + event.key + " updated. Old value: " + event.oldValue + " New value: " + event.newValue);
+
+    }
+  </script>
+
+</body>
+
+</html>

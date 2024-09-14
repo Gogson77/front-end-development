@@ -1,0 +1,14 @@
+[
+  {
+    "countryCode": "sr",
+    "name": "Serbia",
+    "capital": "Belgrade",
+    "description": "Serbia is..."
+  },
+  {
+    "countryCode": "fr",
+    "name": "France",
+    "capital": "Paris",
+    "description": "France is..."
+  }
+]

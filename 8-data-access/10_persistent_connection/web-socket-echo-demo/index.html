@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebSocket Echo Demo</title>
+</head>
+
+<body>
+  <script>
+
+    let webSocket = new WebSocket("wss://echo.websocket.org/");
+
+    webSocket.onopen = function (e) {
+      //connection opened
+      webSocket.send("Hello from webSocket client.");
+    };
+
+    webSocket.onmessage = function (event) {
+      console.log("Message received: " + event.data);
+    };
+
+    webSocket.onclose = function (event) {
+      if(event.wasClean) {
+        console.log("Connection closed cleanly: " + event.code + " " + event.reason);
+      } else {
+        console.log("Connection died.");
+      }
+    };
+
+    webSocket.onerror = function (error) {
+      console.log(error.message);
+    };
+  </script>
+</body>
+
+</html>

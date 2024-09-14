@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajax - CORS</title>
+</head>
+
+<body>
+  <script>
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://examples.wizardbit.com/cors/users-allow-cors.php');
+    xhr.responseType = 'json';
+    xhr.send();
+    xhr.onload = function () {
+      var person = xhr.response;
+      document.write(person.name + ' ' + person.age + ' ' + person.city);
+    };
+    xhr.onerror = function () {
+      console.log('Network Error');
+    };
+    xhr.onprogress = function (event) {
+      console.log('Received ' + event.loaded + ' of ' + event.total);
+    };
+
+  </script>
+</body>
+
+</html>

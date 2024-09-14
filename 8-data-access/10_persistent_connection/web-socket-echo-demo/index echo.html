@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebSocket Echo Demo</title>
+  <style>
+    div,
+    input,
+    textarea {
+      width: 360px;
+    }
+
+    button {
+      margin-top: 4px;
+    }
+
+    #status-container {
+      margin-top: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <input id="message" autocomplete="off">
+  </div>
+  <div>
+    <button id="connect">Connect</button>
+    <button id="disconnect">Disconnect</button>
+    <button id="send">Send</button>
+  </div>
+  <div id="status-container">
+    <textarea name="status" id="status" cols="30" rows="10" readonly></textarea>
+  </div>
+
+  <script>
+
+    let sendButton = document.getElementById("send");
+    let connectButton = document.getElementById("connect");
+    let disconnectButton = document.getElementById("disconnect");
+
+    let messageTextArea = document.getElementById("message");
+    let statusTextArea = document.getElementById("status");
+
+    let webSocket;
+
+    connectButton.addEventListener("click", function () {
+      webSocket = new WebSocket("wss://echo.websocket.org/");
+      webSocket.onopen = function (e) {
+        statusTextArea.value += "Connection established!\n";
+      };
+      webSocket.onmessage = function (event) {
+        statusTextArea.value += "Message received: " + event.data + "\n";
+      };
+      webSocket.onclose = function (event) {
+        statusTextArea.value += "Connection closed: " + event.code + " " + event.reason + "\n";
+      };
+      webSocket.onerror = function (error) {
+        statusTextArea.value += "Error: " + error.message + "\n";
+      };
+    });
+
+    disconnectButton.addEventListener("click", function () {
+      if (webSocket !== undefined) {
+        webSocket.close(1000, "Work complete");
+      }
+    });
+
+    sendButton.addEventListener("click", function () {
+      if (messageTextArea.value === '') {
+        return;
+      } 
+      if (webSocket === undefined ||
+        webSocket.readyState !== WebSocket.OPEN) {
+        statusTextArea.value += "Please open the connection first.\n";
+        return;
+      }
+      webSocket.send(messageTextArea.value);
+      statusTextArea.value += "Message sent: " + messageTextArea.value + "\n";
+      messageTextArea.value = '';
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Long Polling Example</title>
+  <style>
+    #no-of-likes {
+      font-family: sans-serif;
+      font-size: 32px;
+      vertical-align: bottom;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <img src="photo-from-vacation.png" alt="me on vacation">
+  </div>
+  <div>
+    <img src="likes.png" alt="no-of-likes"><span id="no-of-likes">0</span>
+  </div>
+  <script>
+
+    var likes = 0;
+
+    async function subscribe() {
+
+      var url = new URL("https://examples.wizardbit.com/ajax/likes.php");
+      url.searchParams.append("likes", likes);
+      
+      let response = await fetch(url);
+      if (response.status == 502) {
+        // reconnect when connection timeout occur
+        await subscribe();
+      } else if (response.status != 200) {
+        // reconnect when error occur
+        await subscribe();
+      } else {
+        // get data
+        let data = await response.text();
+        likes = parseInt(data);
+        let likesContainer = document.getElementById('no-of-likes');
+        likesContainer.innerHTML = likes;
+        // call subscribe() again
+        await subscribe();
+      }
+    };
+
+    subscribe();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch API - Sending form data</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    form input[type="text"],
+    form textarea {
+      display: block;
+      margin-bottom: 8px;
+      width: 360 px;
+    }
+
+    #response {
+      margin-top: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form name="contact">
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name" autocomplete="off">
+    <label for="message">Message: </label>
+    <textarea name="message" id="message" cols="30" rows="10" autocomplete="off"></textarea>
+    <input type="submit" value="Submit">
+  </form>
+
+  <div id="response"></div>
+
+  <script>
+
+    document.forms.contact.addEventListener("submit", function (e) {
+
+      e.preventDefault();
+      sendFormData();
+
+    });
+
+    async function sendFormData() {
+
+      let formData = new FormData(document.forms.contact);
+      formData.append("contact-code", Math.random().toString(36).substring(7));
+
+      let result = await fetch("contact.php", {
+        method: "POST",
+        body: formData
+      });
+
+      let text = await result.text();
+
+      var responseDiv = document.getElementById("response");
+      responseDiv.innerHTML = text;
+
+
+
+    }
+
+  </script>
+</body>
+
+</html>
