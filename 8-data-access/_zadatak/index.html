@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment - Rad sa podacima na frontendu</title>
+</head>
+
+<!-- <form name="quiz" action="">
+  <label for="question">Question 1: Which one is correct team name in NBA?</label><br><br>
+  <input type="radio" name="options" id="" value="">
+  <label for="option1">New York Bulls</label><br>
+  <input type="radio" name="options" id="" value="">
+  <label for="option2">Los Angeles Kings</label><br>
+  <input type="radio" name="options" id="" value="">
+  <label for="option3">Golden State Warriros</label><br>
+  <input type="radio" name="options" id="" value="">
+  <label for="option4">Huston Rocket</label><br>
+</form> -->
+
+<body>
+  <script>
+    fetch("quiz.json").then(function (response) {
+
+      if (!response.ok) {
+
+        throw Error("Error while reading file.");
+      };
+
+      return response.json();
+
+    }).then(function (response) {
+
+      for (let i = 0; i < quiz.length; i++) {
+
+        document.body.innerHTML += '<h2>' + quiz[i].question + '</h2>';
+        
+        options.forEach(option => {
+          document.body.innerHTML += '<input type="radio" name="option" id="" value=""><label for="option">' + quiz[i].options + '</label><br>';
+        });
+      }
+
+
+    }).catch(function (err) {
+
+      console.log('Fetch problem: ' + err.message);
+
+    });
+  </script>
+</body>
+
+</html>

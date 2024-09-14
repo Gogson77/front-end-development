@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Assignment - Rad sa podacima na frontendu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h3 {
+      margin: 0;
+    }
+    .options {
+      list-style-type: none;
+      padding: 0;
+    }
+    .options li {
+      margin-bottom: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+    }
+  </style>
 </head>
-<form action="">
-  <label for="question">Question 1:</label>
-  <input type="radio" name="">
-
-  <label for="question">Question 2:</label>
-  <label for="question">Question 3:</label>
-  <label for="question">Question 4:</label>
-</form>
-
 <body>
-  <script>
-    var json = JSON.parse(quiz.json);
-    // document.write += 
-  </script>
-</body>
+  <h1>Quiz</h1>
+  <div id="quiz"></div>
+  <button id="saveBtn">Save Answers</button>
 
+  <script src="script.js"></script>
+</body>
 </html>
