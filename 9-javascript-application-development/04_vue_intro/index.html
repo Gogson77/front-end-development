@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue - intro</title>
+</head>
+
+<body>
+  <div id="container">
+    <div>{{ name }}</div>
+    <div>{{ email }}</div>
+    <!-- <div>{{ message }}</div> -->
+  </div>
+
+  <script src="vue.js"></script>
+  <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+
+  <script>
+    
+    var user = { name: "Ben Torrance", email: "ben@email.com" };
+
+    var vm = new Vue ({
+
+      el: '#container',
+      data: user
+
+    })
+
+    /*     var obj = { message: "Hello World!" };
+        var vm = new Vue({
+          el: '#container',
+          data: obj
+        })
+     */
+  </script>
+
+
+</body>
+
+</html>
