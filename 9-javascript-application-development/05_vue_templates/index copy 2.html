@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue - Templates</title>
+</head>
+
+<body>
+
+<div id="container">
+  <input type="text" v-model="age" placeholder="enter your age...">
+  
+  <div v-if="age > 0 && age < 18">You are an adolescent.</div>
+  <div v-else-if="age >= 18 && age < 65">You are an adult.</div>
+  <div v-else-if="age >= 65">You are senior.</div>
+  <div v-else>invalid value.</div>
+</div>
+
+<script src="vue.js"></script>
+
+<script>
+  var user = {
+    name: "Ben",
+    age: undefined
+  }
+
+  var vm = new Vue({
+    el: "#container",
+    data: user
+  })
+
+</script>
+</body>
+
+</html>

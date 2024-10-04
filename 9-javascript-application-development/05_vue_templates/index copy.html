@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue - Templates</title>
+</head>
+
+<body>
+
+<div id="container">
+  <input v-model="name" placeholder="enter your name..." type="text">
+  
+  <label for="favourite-color">Choose your favourite color:</label>
+  <select v-model="color" id="favourite-color">
+    <option>Maroon</option>
+    <option>Blue</option>
+    <option>Yellow</option>
+    <option>Magent</option>
+  </select>
+
+  <div>
+    <div>Your name: {{ name }}</div>
+    <div>Your favourite color: {{ color }}</div>
+  </div>
+</div>
+
+<script src="vue.js"></script>
+
+<script>
+  var user = {
+    name: "Ben",
+    email: "neki@gmail.com",
+    balance: "4324.23424",
+    thumb_url: "/img/sadad.png",
+    color: "Blue"
+  }
+
+  var vm = new Vue({
+    el: "#container",
+    data: user
+  })
+
+</script>
+</body>
+
+</html>

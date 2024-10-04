@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue - Templates</title>
+</head>
+
+<body>
+  <div id="container">
+    <div>{{ capitalizedName }}</div>
+    <div>{{ email }}</div>
+  </div>
+
+  <script src="vue.js"></script>
+
+  <script>
+    var user = {
+      name: "ben torrance",
+      email: "ben@gmail.com"
+    };
+
+    var vm = new Vue({
+      el: '#container',
+      data: user,
+      computed: {
+        capitalizedName: function () {
+          return this.name.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+        }
+
+      }
+    })
+
+  </script>
+</body>
+
+</html>

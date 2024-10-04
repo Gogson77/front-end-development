@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue - Templates</title>
+</head>
+
+<body>
+
+  <div id="container">
+
+    <ul>
+      <li v-for="(value, name, index) in user">{{ index }}. {{ name }} : {{ value }} </li>
+    </ul>
+
+  </div>
+
+  <script src="vue.js"></script>
+
+  <script>
+
+    var data = { 
+      user: {
+        name: "Ben Torrance",
+        email: "ben@email.com",
+        balance: 45646.333
+      } 
+    }
+
+    var vm = new Vue({
+      el: "#container",
+      data: data
+    })
+
+  </script>
+</body>
+
+</html>

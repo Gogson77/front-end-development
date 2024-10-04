@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue - Templates</title>
+</head>
+
+<body>
+
+  <div id="container">
+    <button v-on:click="code = Math.random()">Generate code</button>
+    <p>{{ code }}</p>
+    <br>
+    <button v-on:click="sayHello('Ben', $event)">Say hello Ben</button>
+    <button v-on:click="sayHello('John', $event)">Say hello John</button>
+    <button v-on:click="sayHello('Ana', $event)">Say hello Ana</button>
+  </div>
+
+  <script src="vue.js"></script>
+
+  <script>
+    var vm = new Vue({
+      el: "#container",
+      data: {
+        code: 0
+      },
+      methods: {
+        sayHello: function(name, e){
+          alert("Hello " + name);
+        }
+      }
+    })
+
+  </script>
+</body>
+
+</html>
