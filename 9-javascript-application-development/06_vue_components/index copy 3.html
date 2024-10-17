@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue - Components</title>
+</head>
+
+<body>
+
+  <div id="container">
+    <info-box>This is message 1</info-box>  
+    <info-box>This is message 2</info-box>  
+  </div>
+
+  <script src="vue.js"></script>
+  <script>
+
+    Vue.component('info-box', {
+      template: `
+      <div>
+        <strong>Message:</strong>
+        <slot></slot>
+      </div>
+      `
+    });
+
+
+    let vm = new Vue({
+      el: '#container'
+    });
+  </script>
+</body>
+
+</html>
