@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue - Components</title>
+</head>
+
+<body>
+
+  <div id="container">
+    <my-component v-bind:user="user"></my-component>
+  </div>
+
+
+
+  <script src="vue.js"></script>
+  <script>
+
+    const MyLocalComponent = {
+      props: ['user'],
+      template: `
+              <div class="user-container">
+                <h3>{{ user.name }}</h3>
+                <p v-text="user.email"></p>
+                <p v-text="user.balance"></p>
+                <button v-on:click="sayHello">Say Hello</button>
+              </div>
+                `,
+      methods: {
+        sayHello: function () { 
+          alert(`Hello ${this.user.name}`);
+        }
+      }
+    };
+
+    var data = {
+      user: {
+        name: "Ben Torrance",
+        email: "ben@email.com",
+        balance: 555643.3232
+      }
+    };
+
+    let vm = new Vue({
+      el: '#container',
+      components: {
+        'my-component': MyLocalComponent
+      },
+      data: data
+    });
+  </script>
+</body>
+
+</html>
